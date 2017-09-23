@@ -10,9 +10,9 @@ create table Surgery(
 	Admission_Date date,
 	Surgery_Date date,
 	Discharge_Date date,
-	Follow-up_Date date,
-	Hospital Bill numeric(8,2),
-	Lab fee numeric(8,2),
+	Follow_up_Date date,
+	Hospital_Bill numeric(8,2),
+	Lab_Fee numeric(8,2),
 	primary key(sCode),
 	foreign key(Patient_ID) references patient(Patient_ID) on update cascade
 );
