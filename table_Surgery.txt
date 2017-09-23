@@ -9,7 +9,7 @@ create table Surgery(
 	Evaluation_Date date,
 	Admission_Date date,
 	Surgery_Date date,
-	Discharge_Date date,
+	Discharge_Date date, 
 	Follow_Up_Date date,
 	Hospital_Bill numeric(8,2),
 	Lab_Fee numeric(8,2),
