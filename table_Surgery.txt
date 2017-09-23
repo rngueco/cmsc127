@@ -1,0 +1,18 @@
+create table Surgery(
+	Patient_ID int,
+	sCode int not null auto_increment,
+	Cl_Lip varchar(100),
+	Cl_Palate varchar(100),
+	Operation varchar(100),
+	Repair varchar(100),
+	Surgeon varchar(100),
+	Evaluation_Date date,
+	Admission_Date date,
+	Surgery_Date date,
+	Discharge_Date date,
+	Follow-up_Date date,
+	Hospital Bill numeric(8,2),
+	Lab fee numeric(8,2),
+	primary key(sCode),
+	foreign key(Patient_ID) references patient(Patient_ID) on update cascade
+);
