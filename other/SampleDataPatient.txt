@@ -1,0 +1,11 @@
+INSERT INTO PATIENT VALUES
+(0, 'fname1','lname1', 'mininitial1', 242, 12, 'm', 'presentAddress1', 'provincialAddress1', 'civialStatus1', '2009-09-28', 'birthPlace1', 'religion1', 'occupation1', 1000, 09285746553, 'educationalAttainment1'),
+(0, 'fname2','lname2', 'mininitial2', 752, 13, 'f', 'presentAddress2', 'provincialAddress2', 'civialStatus2', '2009-09-28', 'birthPlace2', 'religion2', 'occupation2', 1000, 09285746553, 'educationalAttainment2'),
+(0, 'fname3','lname3', 'mininitial3', 252, 14, 'm', 'presentAddress3', 'provincialAddress3', 'civialStatus3', '2009-09-28', 'birthPlace3', 'religion3', 'occupation3', 1020, 09285746553, 'educationalAttainment3'),
+(0, 'fname4','lname4', 'mininitial4', 123, 22, 'm', 'presentAddress4', 'provincialAddress4', 'civialStatus4', '2009-09-28', 'birthPlace4', 'religion4', 'occupation4', 1030, 09285746553, 'educationalAttainment4'),
+(0, 'fname5','lname5', 'mininitial5', 456, 67, 'f', 'presentAddress5', 'provincialAddress5', 'civialStatus5', '2009-09-28', 'birthPlace5', 'religion5', 'occupation5', 1000, 09285746553, 'educationalAttainment5'),
+(0, 'fname6','lname6', 'mininitial6', 789, 46, 'm', 'presentAddress6', 'provincialAddress6', 'civialStatus6', '2009-09-28', 'birthPlace6', 'religion6', 'occupation6', 1050, 09245646553, 'educationalAttainment6'),
+(0, 'fname7','lname7', 'mininitial7', 1234, 34, 'm', 'presentAddress7', 'provincialAddress7', 'civialStatus7', '2009-09-28', 'birthPlace7', 'religion7', 'occupation7', 1000, 09285746553, 'educationalAttainment7'),
+(0, 'fname8','lname8', 'mininitial8', 5678, 12, 'm', 'presentAddress8', 'provincialAddress8', 'civialStatus8', '2009-09-28', 'birthPlace8', 'religion8', 'occupation8', 1900, 09246746553, 'educationalAttainment8'),
+(0, 'fname9','lname9', 'mininitial9', 156, 20, 'f', 'presentAddress9', 'provincialAddress9', 'civialStatus9', '2009-09-28', 'birthPlace9', 'religion9', 'occupation9', 2000, 09220946553, 'educationalAttainment9'),
+(0, 'fname10','lname10', 'mininitial10', 342, 30, 'm', 'presentAddress10', 'provincialAddress10', 'civialStatus10', '2009-09-28', 'birthPlace10', 'religion10', 'occupation10', 3000, 09214546553, 'educationalAttainment10');
