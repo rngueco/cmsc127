@@ -1,0 +1,112 @@
+html,body{
+	font-family: "Trebuchet MS", sans-serif;
+	margin:0; 
+	padding:0; 
+	height:100%; 
+	width:100%;
+	color: #2C3E50;
+}
+.body{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.header{
+	display: block;
+	background: #2ECC71;
+	overflow: hidden;
+	padding-left: 20px;
+	padding-right: 20px;
+	letter-spacing: 4px;
+	color: #ECF0F1;
+}
+.header .handle{
+	display: inline-block;
+	float: left;
+	width: 40%;
+	line-height: 35px;
+	font-variant: small-caps;
+}
+.header h1{
+	font-size: 18px;
+}
+.header .navi{
+	display: inline-block;
+	float: right;
+	width: 40%;
+	line-height: 35px;
+	text-align: right;
+}
+.header .navi a{
+	display: inline-block;
+	margin-right: 7px;
+	text-decoration: none;
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #2C3E50;
+	font-size: 14px;
+}
+.header .navi a:hover{
+	
+}
+.content{
+	height: 100%;
+	overflow: hidden;
+	background: #E9E9E9;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.content a#addrec{
+	display: block;
+	text-decoration: none;
+	color: #2C3E50;
+}
+.content a#addrec img{
+	width: 12px;
+	height: 12px;
+}
+.content a button#simple{
+	background-color: #E9E9E9;
+    border: 1px solid #2ECC71;
+    border-radius: 7px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+}
+.content table button{
+    background-color: white;
+    border: 1px solid #2ECC71;
+    border-radius: 7px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+}
+.content table button#summ{
+    border: 1px solid #3498DB;
+}
+.content table{
+	background: white;
+	width: 80%;
+	border-collapse: collapse;
+	font-size: 14px;
+   	border: 1px solid #E9E9E9;
+}
+.content table tr{
+	text-align: left;
+}
+.content table th{
+	padding: 15px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #95A5A6;
+}
+.content table td{
+	padding-left: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+table, th, td{
+	border: 1px solid #E9E9E9;
+}
