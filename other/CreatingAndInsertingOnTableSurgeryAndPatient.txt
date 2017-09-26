@@ -28,7 +28,7 @@ create table Surgery(
 	Hospital_Bill numeric(8,2),
 	Lab_fee numeric(8,2),
 	primary key(sCode),
-	foreign key(patient_id) references patient(patient_id) on update cascade
+	foreign key(patient_id) references patient(patient_id) on update cascade on delete cascade
 );
 
 INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, Evaluation_Date, Admission_Date, Surgery_Date, Discharge_Date, Follow_Up_Date, Hospital_Bill, Lab_fee) VALUES 
