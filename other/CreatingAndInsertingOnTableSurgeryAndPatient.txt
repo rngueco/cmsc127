@@ -24,7 +24,7 @@ birthdate date null,
 birthplace varchar(150) null,
 religion varchar(30) null,
 occupation varchar(50) null,
-monthly_income int(10) unsigned null,
+monthly_income numeric(8,2) unsigned null,
 contact_number varchar(30) null,
 highest_educ_attainment varchar(50) null
 );
