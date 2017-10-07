@@ -15,8 +15,8 @@
 create table Surgery(
 	sCode int not null auto_increment,
 	patient_id int unsigned not null,
-	Cl_Lip char(1),
-	Cl_Palate char(1),
+	Cl_Lip varchar(30),
+	Cl_Palate varchar(30),
 	Operation varchar(100),
 	Repair varchar(100),
 	Surgeon varchar(100),
