@@ -1,49 +1,12 @@
 
 // CREATING and INSERTING to TABLE Surgery
 // CHANGES:
-// 1. Cl_Lip from varchar to char
-// 2. Cl_Palate from varchar to char
-// 3. switched sCode and patient_id
+// 1. switched sCode and patient_id
 
 // NOTE: 
 // 1. create and insert table patient first before surgery table
 // 2. problem about duplicates on inserting data on table Surgery
 // 
-
-//CREATING AND INSERTING ON TABLE SURGERY
-
-create table Surgery(
-	sCode int not null auto_increment,
-	patient_id int unsigned not null,
-	Cl_Lip varchar(30),
-	Cl_Palate varchar(30),
-	Operation varchar(100),
-	Repair varchar(100),
-	Surgeon varchar(100),
-	Evaluation_Date date,
-	Admission_Date date,
-	Surgery_Date date,
-	Discharge_Date date,
-	Follow_Up_Date date,
-	Hospital_Bill numeric(8,2),
-	Lab_fee numeric(8,2),
-	primary key(sCode),
-	foreign key(patient_id) references patient(patient_id) on update cascade on delete cascade
-);
-
-INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, Evaluation_Date, Admission_Date, Surgery_Date, Discharge_Date, Follow_Up_Date, Hospital_Bill, Lab_fee) VALUES 
-(1, '+', '+', 'operation1', 'repair1', 'surgeon1', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1000.50),
-(3, '+', '-', 'operation2', 'repair2', 'surgeon2', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
-(2, '+', '-', 'operation3', 'repair3', 'surgeon3', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
-(8, '+', '-', 'operation4', 'repair4', 'surgeon4', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 9000.50),
-(7, '+', '+', 'operation5', 'repair5', 'surgeon5', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1000.50),
-(4, '+', '+', 'operation6', 'repair6', 'surgeon6', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50),
-(6, '+', '+', 'operation7', 'repair7', 'surgeon7', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1340.50),
-(5, '-', '+', 'operation8', 'repair8', 'surgeon8', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1080.50),
-(9, '+', '+', 'operation9', 'repair9', 'surgeon9', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1020.50),
-(10, '-', '+', 'operation10', 'repair10', 'surgeon10', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50);
-
-ALTER TABLE patient AUTO_INCREMENT = 1;  // if you want to start patient_id to 1 or any number you want
 
 // CREATING and INSERTING to TABLE PATIENT
 
@@ -69,13 +32,48 @@ highest_educ_attainment varchar(50) null
 ALTER TABLE patient AUTO_INCREMENT = 1;  // if you want to start patient_id to 1 or any number you want
 
 INSERT INTO PATIENT (patient_fname, patient_lname, patient_minitial, age, sex, present_address, provincial_address, civil_status, birthdate, birthplace, religion, occupation, monthly_income, contact_number, highest_educ_attainment) VALUES
-('fname1','lname1', 'A', 12, 'm', 'presentAddress1', 'provincialAddress1', 'civialStatus1', '2009-12-28', 'birthPlace1', 'religion1', 'occupation1', 1000, 09285746553, 'educationalAttainment1'),
-('fname2','lname2', 'B', 13, 'f', 'presentAddress2', 'provincialAddress2', 'civialStatus2', '2009-02-27', 'birthPlace2', 'religion2', 'occupation2', 1000, 09285746553, 'educationalAttainment2'),
-('fname3','lname3', 'C', 14, 'm', 'presentAddress3', 'provincialAddress3', 'civialStatus3', '2010-01-18', 'birthPlace3', 'religion3', 'occupation3', 1020, 09285746553, 'educationalAttainment3'),
-('fname4','lname4', 'D', 22, 'm', 'presentAddress4', 'provincialAddress4', 'civialStatus4', '2001-01-28', 'birthPlace4', 'religion4', 'occupation4', 1030, 09285746553, 'educationalAttainment4'),
-('fname5','lname5', 'E', 67, 'f', 'presentAddress5', 'provincialAddress5', 'civialStatus5', '2009-02-28', 'birthPlace5', 'religion5', 'occupation5', 1000, 09285746553, 'educationalAttainment5'),
-('fname6','lname6', 'F', 46, 'm', 'presentAddress6', 'provincialAddress6', 'civialStatus6', '2009-06-18', 'birthPlace6', 'religion6', 'occupation6', 1050, 09245646553, 'educationalAttainment6'),
-('fname7','lname7', 'G', 34, 'm', 'presentAddress7', 'provincialAddress7', 'civialStatus7', '2007-07-08', 'birthPlace7', 'religion7', 'occupation7', 1000, 09285746553, 'educationalAttainment7'),
-('fname8','lname8', 'H', 12, 'm', 'presentAddress8', 'provincialAddress8', 'civialStatus8', '2007-08-08', 'birthPlace8', 'religion8', 'occupation8', 1900, 09246746553, 'educationalAttainment8'),
-('fname9','lname9', 'I', 20, 'f', 'presentAddress9', 'provincialAddress9', 'civialStatus9', '2012-09-01', 'birthPlace9', 'religion9', 'occupation9', 2000, 09220946553, 'educationalAttainment9'),
-('fname10','lname10', 'J', 30, 'm', 'presentAddress10', 'provincialAddress10', 'civialStatus10', '2009-09-28', 'birthPlace10', 'religion10', 'occupation10', 3000, 09214546553, 'educationalAttainment10');
+('Rick','Sanchez', 'A', 12, 'm', '#123 Internet Street, Universe', '#23 Michael Jordan Rd., NBA City', 'Widowed', '2009-12-28', 'Another Galaxy', 'Atheist', 'Crazy Scientist', 1000, 09285746553, 'High School'),
+('Morty','Smith', 'B', 13, 'm', '#123 Internet Street, Universe', '#78 Gomburza Street, Milky Way', 'Single', '2009-02-27', 'Minnesota', 'Protestant', ' ', 1000, 09285746553, 'Middle School'),
+('Juan','dela Cruz', 'C', 43, 'm', '#2 Sta. Ana Rd., Barangay Batumbakal', '#3 Sta. Ana Rd., Barangay Batumbakal', 'Married', '2010-01-18', 'Olongapo City', 'Roman Catholic', 'Carpenter', 1020, 09285746553, 'High School'),
+('Richard','Aquino', 'D', 22, 'm', '#21 Plaza Miranda, Laguna', '#01 Bato Rd., Maguindanao', 'Single', '2001-01-28', 'birthPlace4', 'Roman Catholic', 'Unemployed', 1030, 09285746553, 'College'),
+('Michaela','Gomez', 'E', 67, 'f', '#34 Engineers Hill, Baguio City', '#12 San Manuel, Pangasinan', 'Married', '2009-02-28', 'Baguio City', 'Anglican', 'Unemployed', 1000, 09285746553, 'High School'),
+('Rodolfo','Manatad', 'F', 46, 'm', '#26 Eagle Crest Village, Baguio City', '#45 Bacolod, Iloilo', 'Married', '2009-06-18', 'Bacolod City', 'Roman Catholic', 'Unemployed', 1050, 09245646553, 'College'),
+('Mark','Lazaro', 'G', 34, 'm', '#90 Batumbakal Street, Sta. Cruz, Manila', '#40 San Pedro, Laguna', 'Married', '2007-07-08', 'Laguna', 'Roman Catholic', 'Unemployed', 1000, 09285746553, 'College'),
+('Pedro','Miguel', 'H', 12, 'm', '#03 Palispis Highway, Pampanga', '#21 San Manuel, Pangasinan', 'Single', '2007-08-08', 'Pangasinan', 'Born Again Christian', 'Unemployed', 1900, 09246746553, 'Elementary'),
+('Maria','Hernandez', 'I', 20, 'f', '#45 Gumamela Street, Baguio City', '#45 Gumamela Street, Baguio City', 'Single', '2012-09-01', 'Baguio City', 'Anglican', 'Clerk', 2000, 09220946553, 'College'),
+('Tonio','Fernandez', 'J', 30, 'm', '#56 Gombuza Highway, Bataan', '#23 Michael Jordan Rd., NBA City', 'Married', '2009-09-28', 'Laguna', 'Mormon', 'Unemployed', 3000, 09214546553, 'High School');
+
+//CREATING AND INSERTING ON TABLE SURGERY
+
+create table Surgery(
+	sCode int not null auto_increment,
+	patient_id int unsigned not null,
+	Cl_Lip varchar(50),
+	Cl_Palate varchar(50),
+	Operation varchar(100),
+	Repair varchar(100),
+	Surgeon varchar(100),
+	Evaluation_Date date,
+	Admission_Date date,
+	Surgery_Date date,
+	Discharge_Date date,
+	Follow_Up_Date date,
+	Hospital_Bill numeric(8,2),
+	Lab_fee numeric(8,2),
+	primary key(sCode),
+	foreign key(patient_id) references patient(patient_id) on update cascade on delete cascade
+);
+
+INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, Evaluation_Date, Admission_Date, Surgery_Date, Discharge_Date, Follow_Up_Date, Hospital_Bill, Lab_fee) VALUES 
+(1, '+', '+', 'Lorem ipsum', 'Duis ut bibendum', 'Dr. Who', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1000.50),
+(3, '+', '-', 'Dolor sit amet', 'Quisque a luctus', 'Dr. Strange', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
+(2, '+', '-', 'Praesent nec condimentum', 'Vestibulum ante ipsum', 'Dr. Valdez', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
+(8, '+', '-', 'Vestibulum ante ipsum', 'Cras urna arcu', 'Dr. Antonio', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 9000.50),
+(7, '+', '+', 'Cras quam est', 'Phasellus at ultrices', 'Dr. Percival', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1000.50),
+(4, '+', '+', 'Sed at semper', 'Suspendisse pulvinar iaculis', 'Dr. Potter', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50),
+(6, '+', '+', 'Maecenas commodo egestas', 'Lorem ipsum', 'Dr. Strange', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1340.50),
+(5, '-', '+', 'Praesent nec eleifend', 'Cras urna arcu', 'Dr. Who', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1080.50),
+(9, '+', '+', 'Cras urna arcu', 'Vestibulum ante ipsum', 'Dr. Kim', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1020.50),
+(10, '-', '+', 'Suspendisse pulvinar iaculis', 'Etiam maximus eu', 'Dr. Smith', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50),
+(11, '-', '+', 'Phasellus at ultrices', 'Fusce fringilla metus', 'Dr. Sanchez', '2010-04-02', '2009-01-04', '2010-01-21', '2010-06-02', '2012-01-12', 500.75, 1200.50),
+(12, '-', '+', 'Maecenas commodo egestas', 'Fusce fringilla metus', 'Dr. Sanchez', '2010-04-02', '2009-01-04', '2010-01-21', '2010-06-02', '2012-01-12', 500.75, 1200.50);
