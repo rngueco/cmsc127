@@ -22,13 +22,18 @@ ALTER TABLE patient AUTO_INCREMENT = 1;
 INSERT INTO PATIENT (patient_fname, patient_lname, patient_minitial, age, sex, present_address, provincial_address, civil_status, birthdate, birthplace, religion, occupation, monthly_income, contact_number, highest_educ_attainment) VALUES
 ('Rick','Sanchez', 'A', 12, 'm', '#123 Internet Street, Universe', '#23 Michael Jordan Rd., NBA City', 'Widowed', '2009-12-28', 'Another Galaxy', 'Atheist', 'Crazy Scientist', 1000, 09285746553, 'High School'),
 ('Morty','Smith', 'B', 13, 'm', '#123 Internet Street, Universe', '#78 Gomburza Street, Milky Way', 'Single', '2009-02-27', 'Minnesota', 'Protestant', ' ', 1000, 09285746553, 'Middle School'),
+('John','Doe', 'B', 13, 'm', '#123 Internet Street, Universe', '#78 Gomburza Street, Milky Way', 'Single', '2009-02-27', 'Minnesota', 'Protestant', ' ', 1000, 09285746553, 'Middle School'),
+('Franco','Danvers', 'A', 12, 'm', '#123 Internet Street, Universe', '#23 Michael Jordan Rd., NBA City', 'Widowed', '2009-12-28', 'Another Galaxy', 'Atheist', 'Crazy Scientist', 1000, 09285746553, 'High School'),
 ('Juan','dela Cruz', 'C', 43, 'm', '#2 Sta. Ana Rd., Barangay Batumbakal', '#3 Sta. Ana Rd., Barangay Batumbakal', 'Married', '2010-01-18', 'Olongapo City', 'Roman Catholic', 'Carpenter', 1020, 09285746553, 'High School'),
 ('Richard','Aquino', 'D', 22, 'm', '#21 Plaza Miranda, Laguna', '#01 Bato Rd., Maguindanao', 'Single', '2001-01-28', 'birthPlace4', 'Roman Catholic', 'Unemployed', 1030, 09285746553, 'College'),
+('Kenneth','Aquino', 'D', 22, 'm', '#21 Plaza Miranda, Laguna', '#01 Bato Rd., Maguindanao', 'Single', '2001-01-28', 'birthPlace4', 'Roman Catholic', 'Unemployed', 1030, 09285746553, 'College'),
 ('Michaela','Gomez', 'E', 67, 'f', '#34 Engineers Hill, Baguio City', '#12 San Manuel, Pangasinan', 'Married', '2009-02-28', 'Baguio City', 'Anglican', 'Unemployed', 1000, 09285746553, 'High School'),
 ('Rodolfo','Manatad', 'F', 46, 'm', '#26 Eagle Crest Village, Baguio City', '#45 Bacolod, Iloilo', 'Married', '2009-06-18', 'Bacolod City', 'Roman Catholic', 'Unemployed', 1050, 09245646553, 'College'),
 ('Mark','Lazaro', 'G', 34, 'm', '#90 Batumbakal Street, Sta. Cruz, Manila', '#40 San Pedro, Laguna', 'Married', '2007-07-08', 'Laguna', 'Roman Catholic', 'Unemployed', 1000, 09285746553, 'College'),
 ('Pedro','Miguel', 'H', 12, 'm', '#03 Palispis Highway, Pampanga', '#21 San Manuel, Pangasinan', 'Single', '2007-08-08', 'Pangasinan', 'Born Again Christian', 'Unemployed', 1900, 09246746553, 'Elementary'),
+('Gabriel','Peters', 'H', 12, 'm', '#03 Palispis Highway, Pampanga', '#21 San Manuel, Pangasinan', 'Single', '2007-08-08', 'Pangasinan', 'Born Again Christian', 'Unemployed', 1900, 09246746553, 'Elementary'),
 ('Maria','Hernandez', 'I', 20, 'f', '#45 Gumamela Street, Baguio City', '#45 Gumamela Street, Baguio City', 'Single', '2012-09-01', 'Baguio City', 'Anglican', 'Clerk', 2000, 09220946553, 'College'),
+('Jemimah','Perez', 'I', 20, 'f', '#45 Gomburza Street, Laguna City', '#45 Gumamela Street, Baguio City', 'Single', '2012-09-01', 'Baguio City', 'Anglican', 'Clerk', 2000, 09220946553, 'College'),
 ('Tonio','Fernandez', 'J', 30, 'm', '#56 Gombuza Highway, Bataan', '#23 Michael Jordan Rd., NBA City', 'Married', '2009-09-28', 'Laguna', 'Mormon', 'Unemployed', 3000, 09214546553, 'High School');
 
 create table Surgery(
@@ -55,9 +60,11 @@ INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, E
 (3, '+', '-', 'Dolor sit amet', 'Quisque a luctus', 'Dr. Strange', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
 (2, '+', '-', 'Praesent nec condimentum', 'Vestibulum ante ipsum', 'Dr. Valdez', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
 (8, '+', '-', 'Vestibulum ante ipsum', 'Cras urna arcu', 'Dr. Antonio', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 9000.50),
+(12, '+', '-', 'Vestibulum ante ipsum', 'Cras urna arcu', 'Dr. Antonio', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 9000.50),
 (7, '+', '+', 'Cras quam est', 'Phasellus at ultrices', 'Dr. Percival', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1000.50),
 (4, '+', '+', 'Sed at semper', 'Suspendisse pulvinar iaculis', 'Dr. Potter', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50),
 (6, '+', '+', 'Maecenas commodo egestas', 'Lorem ipsum', 'Dr. Strange', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1340.50),
 (5, '-', '+', 'Praesent nec eleifend', 'Cras urna arcu', 'Dr. Who', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1080.50),
 (9, '+', '+', 'Cras urna arcu', 'Vestibulum ante ipsum', 'Dr. Kim', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1020.50),
-(10, '-', '+', 'Suspendisse pulvinar iaculis', 'Etiam maximus eu', 'Dr. Smith', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50);
+(10, '-', '+', 'Suspendisse pulvinar iaculis', 'Etiam maximus eu', 'Dr. Smith', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50),
+(11, '+', '+', 'Cras urna arcu', 'Vestibulum ante ipsum', 'Dr. Kim', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1020.50);
