@@ -19,9 +19,9 @@
 				</tr>
 				<tr>
 					<td>
-						By patient's last name <input type='text' name="lname" value='Enter last name'><br /><br />
-						By patient's first name <input type='text' name="fname" value='Enter first name'><br /><br />
-						By surgeon <input type='text' name="surgeon" value='Enter surgeon'><br /><br />
+						By patient's last name <input type='text' name="lname" placeholder='Enter last name'><br /><br />
+						By patient's first name <input type='text' name="fname" placeholder='Enter first name'><br /><br />
+						By surgeon <input type='text' name="surgeon" placeholder='Enter surgeon'><br /><br />
 						<input type='submit' value='Search'>
 					</td>
 				</tr>
