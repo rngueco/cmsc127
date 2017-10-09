@@ -24,22 +24,22 @@
 				</tr>
 			<?php
 				include 'link.php';
-				$lname = $_POST["lname"];
-				$fname = $_POST["fname"];
-				$surgeon = $_POST["surgeon"];
+				$lname = $_REQUEST["lname"];
+				$fname = $_REQUEST["fname"];
+				$surgeon = $_REQUEST["surgeon"];
 
 				$query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, surgery.Operation, surgery.Repair, surgery.Surgeon 
 				FROM patient RIGHT JOIN surgery ON patient.patient_id = surgery.patient_id";
     			
     			$conditions = array();
 
-    			if($lname != "Enter last name") {
+    			if($lname != "") {
       			$conditions[] = "patient.patient_lname='$lname'";
 			    }
-			    if($fname != "Enter first name") {
+			    if($fname != "") {
 			      $conditions[] = "patient.patient_fname='$fname'";
 			    }
-			    if($surgeon != "Enter surgeon") {
+			    if($surgeon != "") {
 			      $conditions[] = "surgery.surgeon='$surgeon'";
 			    }
 
