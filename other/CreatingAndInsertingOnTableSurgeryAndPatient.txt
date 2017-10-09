@@ -74,6 +74,4 @@ INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, E
 (6, '+', '+', 'Maecenas commodo egestas', 'Lorem ipsum', 'Dr. Strange', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1340.50),
 (5, '-', '+', 'Praesent nec eleifend', 'Cras urna arcu', 'Dr. Who', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1080.50),
 (9, '+', '+', 'Cras urna arcu', 'Vestibulum ante ipsum', 'Dr. Kim', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1020.50),
-(10, '-', '+', 'Suspendisse pulvinar iaculis', 'Etiam maximus eu', 'Dr. Smith', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50),
-(11, '-', '+', 'Phasellus at ultrices', 'Fusce fringilla metus', 'Dr. Sanchez', '2010-04-02', '2009-01-04', '2010-01-21', '2010-06-02', '2012-01-12', 500.75, 1200.50),
-(12, '-', '+', 'Maecenas commodo egestas', 'Fusce fringilla metus', 'Dr. Sanchez', '2010-04-02', '2009-01-04', '2010-01-21', '2010-06-02', '2012-01-12', 500.75, 1200.50);
+(10, '-', '+', 'Suspendisse pulvinar iaculis', 'Etiam maximus eu', 'Dr. Smith', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1200.50);
