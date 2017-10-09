@@ -172,7 +172,7 @@
 							</select></td>
 					</tr>
 					<tr>
-						<td>Follow-up Date</tr>
+						<td>Follow-up Date</td>
 						<td><select>
    	 				<?php for ($i = 1950; $i <= 2055; $i++) : ?>
         			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
