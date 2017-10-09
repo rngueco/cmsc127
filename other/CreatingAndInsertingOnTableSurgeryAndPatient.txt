@@ -1,15 +1,3 @@
-
-// CREATING and INSERTING to TABLE Surgery
-// CHANGES:
-// 1. switched sCode and patient_id
-
-// NOTE: 
-// 1. create and insert table patient first before surgery table
-// 2. problem about duplicates on inserting data on table Surgery
-// 
-
-// CREATING and INSERTING to TABLE PATIENT
-
 CREATE TABLE patient(
 patient_id int unsigned not null auto_increment primary key,
 patient_fname varchar(30) not null,
@@ -29,7 +17,7 @@ contact_number varchar(30) null,
 highest_educ_attainment varchar(50) null
 );
 
-ALTER TABLE patient AUTO_INCREMENT = 1;  // if you want to start patient_id to 1 or any number you want
+ALTER TABLE patient AUTO_INCREMENT = 1;
 
 INSERT INTO PATIENT (patient_fname, patient_lname, patient_minitial, age, sex, present_address, provincial_address, civil_status, birthdate, birthplace, religion, occupation, monthly_income, contact_number, highest_educ_attainment) VALUES
 ('Rick','Sanchez', 'A', 12, 'm', '#123 Internet Street, Universe', '#23 Michael Jordan Rd., NBA City', 'Widowed', '2009-12-28', 'Another Galaxy', 'Atheist', 'Crazy Scientist', 1000, 09285746553, 'High School'),
@@ -42,8 +30,6 @@ INSERT INTO PATIENT (patient_fname, patient_lname, patient_minitial, age, sex, p
 ('Pedro','Miguel', 'H', 12, 'm', '#03 Palispis Highway, Pampanga', '#21 San Manuel, Pangasinan', 'Single', '2007-08-08', 'Pangasinan', 'Born Again Christian', 'Unemployed', 1900, 09246746553, 'Elementary'),
 ('Maria','Hernandez', 'I', 20, 'f', '#45 Gumamela Street, Baguio City', '#45 Gumamela Street, Baguio City', 'Single', '2012-09-01', 'Baguio City', 'Anglican', 'Clerk', 2000, 09220946553, 'College'),
 ('Tonio','Fernandez', 'J', 30, 'm', '#56 Gombuza Highway, Bataan', '#23 Michael Jordan Rd., NBA City', 'Married', '2009-09-28', 'Laguna', 'Mormon', 'Unemployed', 3000, 09214546553, 'High School');
-
-//CREATING AND INSERTING ON TABLE SURGERY
 
 create table Surgery(
 	sCode int not null auto_increment,
