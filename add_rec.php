@@ -23,7 +23,7 @@
 						<td><input type="text" name="fname"> </td>
 						<td>Evaluation Date</td> 
 						<td><select name = "evalyear">
-   	 						<?php for ($i = 1950; $i <= 2055; $i++) : ?>
+   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
         						<option value="<?php echo $i; ?>" <?php if($i == 2000){echo "selected = 'selected'"; }?>><?php echo $i; ?></option>
     							<?php endfor; ?>
 							</select>
@@ -52,7 +52,7 @@
 						<td><input type="text" name="lname"></td>
 						<td>Admission Date</td>
 						<td><select name = "adyear">
-			   	 				<?php for ($i = 1950; $i <= 2055; $i++) : ?>
+			   	 				<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
 			        			<option value="<?php echo $i; ?>" <?php if($i == 2000){echo "selected = 'selected'"; }?>><?php echo $i; ?></option>
 			    				<?php endfor; ?>
 							</select>
@@ -81,7 +81,7 @@
 						<td><input type="text" name="minitial"></td>
 						<td>Surgery Date</td>
 						<td><select name = "suryear">
-			   	 				<?php for ($i = 1950; $i <= 2055; $i++) : ?>
+			   	 				<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
 			        			<option value="<?php echo $i; ?>" <?php if($i == 2000){echo "selected = 'selected'"; }?>><?php echo $i; ?></option>
 			    				<?php endfor; ?>
 							</select>
@@ -110,7 +110,7 @@
 						<td><input type="text" name="clip"></td>
 						<td>Discharge Date</td>
 						<td><select name = "disyear">
-			   	 				<?php for ($i = 1950; $i <= 2055; $i++) : ?>
+			   	 				<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
 			        			<option value="<?php echo $i; ?>" <?php if($i == 2000){echo "selected = 'selected'"; }?>><?php echo $i; ?></option>
 			    				<?php endfor; ?>
 							</select>
@@ -140,7 +140,7 @@
 						<td><input type="text" name="cpalate"></td>
 						<td>Follow-up Date</td>
 						<td><select name = "fupyear">
-			   	 				<?php for ($i = 1950; $i <= 2055; $i++) : ?>
+			   	 				<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
 			        			<option value="<?php echo $i; ?>" <?php if($i == 2000){echo "selected = 'selected'"; }?>><?php echo $i; ?></option>
 			    				<?php endfor; ?>
 							</select>
