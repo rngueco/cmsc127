@@ -5,10 +5,10 @@ if($_POST){
 	include 'link.php';
 	$fname = $_POST["fname"];
 	$lname = $_POST["lname"];
-	$minital = $_POST["minitial"];
-	$query = "INSERT INTO PATIENT (patient_fname, patient_lname, patient_minital) VALUES('$fname', '$lname', '$minital');";
+	$minitial = $_POST["minitial"];
+	$query = "INSERT INTO PATIENT (patient_fname, patient_lname, patient_minitial) VALUES('$fname', '$lname', '$minitial');";
 	$result = mysqli_query($link, $query);
-	$query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, surgery.Operation, surgery.Repair, surgery.Surgeon FROM patient RIGHT JOIN surgery ON patient.patient_id = surgery.patient_id ORDER BY patient.patient_lname";
+	$query = "SELECT patient_id FROM patient WHERE patient_fname='$fname' AND patient_lname='$lname' AND patient_minitial='$minitial' ORDER BY patient_id DESC";
 	$result = mysqli_query($link, $query);	
 	$open = mysqli_fetch_array($result);
 	
