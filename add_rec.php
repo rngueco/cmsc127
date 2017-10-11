@@ -3,6 +3,7 @@
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="add_rec.js" type="text/javascript" ></script>
+	<script src="backToIndex.js" type="text/javascript" ></script>
 </head>
 <body>
 	<div class="header">
