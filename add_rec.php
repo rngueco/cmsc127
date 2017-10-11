@@ -2,17 +2,19 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="add_rec.js" type="text/javascript" ></script>
 </head>
 <body>
 	<div class="header">
 		<div class="handle">
+			<h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" /></h1>
 			<h1>Luke Foundation, Inc</h1>
 		</div>
 	</div>
 	<div class="content">
-		<center>
+		<center id="toRep">
 			<h1>Add New Record</h1>
-			<form action="add_newrec.php" method="post">
+			<form onsubmit="add_rec()" method="post">
 				<table>
 					<tr>
 						<th colspan="2">Patient Information</th>
