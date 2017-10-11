@@ -16,7 +16,7 @@ $result = mysqli_query($link, $query);
 <body>
 	<div class="header">
 		<div class="handle">
-			<h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" /></h1>
+			<h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" onclick="back()" /></h1>
 			<h1>Luke Foundation, Inc</h1>
 		</div>
 	</div>
