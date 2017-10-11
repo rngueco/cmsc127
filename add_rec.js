@@ -1,5 +1,4 @@
 function add_rec(){
-	alert("in");
 	var xhttp = new XMLHttpRequest();
 	var fname = document.getElementsByName('fname')[0].value;
 	var lname = document.getElementsByName('lname')[0].value;
@@ -34,14 +33,12 @@ function add_rec(){
 	var bills = document.getElementsByName('hbills')[0].value;
 	var lfees = document.getElementsByName('lfees')[0].value;
 	
-	alert("good");
 	xhttp.open("POST","add_newrec.php", true);
 	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xhttp.send("fname="+fname+"&lname="+lname+"&minitial="+minit+"&clip="+cllip+"&cpalate="+clpal+"&operation="+toper+"&repair="+trepa+"&surgeon="+surge+"&evalyear="+eyear+"&evalmonth="+emont+"&evalday="+edate+"&adyear="+ayear+"&admonth="+amont+"&adday="+adate+"&suryear="+syear+"&surmonth="+smont+"&surday="+sdate+"&disyear="+dyear+"&dismonth="+dmont+"&disday="+ddate+"&fupyear="+fyear+"&fupmonth="+fmont+"&fupday="+fdate+"&hbills="+bills+"&lfees="+lfees);
 	var cont = document.getElementById("toRep");
 	cont.innerHTML = "<h1>Successful</h1>";
 	setTimeout(back, 3000);
-	alert("done");
 }
 
 function back(){
