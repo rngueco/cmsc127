@@ -3,10 +3,12 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="backToIndex.js" type="text/javascript" ></script>
 </head>
 <body>
 	<div class="header">
 		<div class="handle">
+			<h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" onclick="back()" /></h1>
 			<h1>Luke Foundation, Inc</h1>
 		</div>
 	</div>
