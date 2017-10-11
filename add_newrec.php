@@ -1,5 +1,3 @@
-<html>
-<body>
 <?php
 if($_POST){
 	include 'link.php';
@@ -31,5 +29,3 @@ if($_POST){
 
 }
 ?>
-</body>
-</html>
