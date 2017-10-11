@@ -40,7 +40,3 @@ function add_rec(){
 	cont.innerHTML = "<h1>Successful</h1>";
 	setTimeout(back, 3000);
 }
-
-function back(){
-	window.location = "index.php";
-}
