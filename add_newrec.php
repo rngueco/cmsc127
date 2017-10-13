@@ -16,11 +16,31 @@ if($_POST){
 	$top = $_POST["operation"];
 	$trep = $_POST["repair"];
 	$sur = $_POST["surgeon"];
-	$edate = $_POST["evalyear"]."-".$_POST["evalmonth"]."-".$_POST["evalday"];
-	$addate = $_POST["adyear"]."-".$_POST["admonth"]."-".$_POST["adday"];
-	$surgdate = $_POST["suryear"]."-".$_POST["surmonth"]."-".$_POST["surday"];
-	$disdate = $_POST["disyear"]."-".$_POST["dismonth"]."-".$_POST["disday"];
-	$fupdate =$_POST["fupyear"]."-".$_POST["fupmonth"]."-".$_POST["fupday"];
+	if($_POST["evalyear"]==0 || $_POST["evalmonth"]==0 || $_POST["evalday"]==0){
+		$edate = 'NULL';
+	}else{
+		$edate = $_POST["evalyear"]."-".$_POST["evalmonth"]."-".$_POST["evalday"];
+	}
+	if($_POST["adyear"]==0 || $_POST["admonth"]==0 || $_POST["adday"]==0){
+		$addate = 'NULL';
+	}else{
+		$addate = $_POST["adyear"]."-".$_POST["admonth"]."-".$_POST["adday"];
+	}
+	if($_POST["suryear"]==0 || $_POST["surmonth"]==0 || $_POST["surday"]==0){
+		$surgdate = 'NULL';
+	}else{
+		$surgdate = $_POST["suryear"]."-".$_POST["surmonth"]."-".$_POST["surday"];
+	}
+	if($_POST["disyear"]==0 || $_POST["dismonth"]==0 || $_POST["disday"]==0){
+		$disdate = 'NULL';
+	}else{
+		$disdate = $_POST["disyear"]."-".$_POST["dismonth"]."-".$_POST["disday"];
+	}
+	if($_POST["fupyear"]==0 || $_POST["fupmonth"]==0 || $_POST["fupday"]==0){
+		$fupdate = 'NULL';
+	}else{
+		$fupdate = $_POST["fupyear"]."-".$_POST["fupmonth"]."-".$_POST["fupday"];
+	}
 	$hbill = $_POST["hbills"];
 	$lfee = $_POST["lfees"];
 	$query = "INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, Evaluation_Date, Admission_Date, Surgery_Date, Discharge_Date, Follow_Up_Date, Hospital_Bill, Lab_fee)
