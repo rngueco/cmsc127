@@ -3,12 +3,13 @@
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="backToIndex.js" type="text/javascript" ></script>
+	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 <body>
 	<div class="header">
 		<div class="handle">
-			<h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" onclick="back()" /></h1>
-			<h1>Luke Foundation, Inc</h1>
+			<span onclick="back()" ><h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" /></h1>
+			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
 	<div class="content">
@@ -22,6 +23,31 @@
 				$result2 = mysqli_query($link, $query2);
 				$open = mysqli_fetch_array($result);
 				$open2 = mysqli_fetch_array($result2);
+				if($open['Evaluation_Date']=='0000-00-00'){
+					$eDate = "N/A";
+				}else{
+					$eDate = $open['Evaluation_Date'];
+				}
+				if($open['Admission_Date']=='0000-00-00'){
+					$aDate = "N/A";
+				}else{
+					$aDate = $open['Admission_Date'];
+				}
+				if($open['Surgery_Date']=='0000-00-00'){
+					$sDate = "N/A";
+				}else{
+					$sDate = $open['Surgery_Date'];
+				}
+				if($open['Discharge_Date']=='0000-00-00'){
+					$dDate = "N/A";
+				}else{
+					$dDate = $open['Discharge_Date'];
+				}
+				if($open['Follow_Up_Date']=='0000-00-00'){
+					$fDate = "N/A";
+				}else{
+					$fDate = $open['Follow_Up_Date'];
+				}
 
 				echo "
 				<h1>".$open2['patient_fname']." ".$open2['patient_lname']."</h1>
@@ -60,35 +86,40 @@
 					<td><b>Hospital</b></td>
 					<td>".$open['Hospital_Bill']."</td>
 					<td><b>Evaluation Date</b></td>
-					<td>".$open['Evaluation_Date']."</td>
+					<td>".$eDate."</td>
 				</tr>
 				<tr>
 					<td><b>Laboratory</b></td>
 					<td>".$open['Lab_fee']."</td>
 					<td><b>Admission Date</b></td>
-					<td>".$open['Admission_Date']."</td>
+					<td>".$aDate."</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td><b>Surgery Date</b></td>
-					<td>".$open['Surgery_Date']."</td>
+					<td>".$sDate."</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td><b>Discharge Date</b></td>
-					<td>".$open['Discharge_Date']."</td>
+					<td>".$dDate."</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td><b>Follow-Up Date</b></td>
-					<td>".$open['Follow_Up_Date']."</td>
+					<td>".$fDate."</td>
 				</tr>
-			</table>"
-			?>
+			</table>
 	</center>
+			<br/>
+			<form action='remove.php' action='post' style='margin-left:10%'>
+				<input type='hidden' name='PID' value='".$open['patient_id']."'>
+				<input type='submit' value='Delete Record'>
+			</form>"
+		?>
 	</div>
 </body>
 </html>
