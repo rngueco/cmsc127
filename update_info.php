@@ -2,11 +2,14 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="backToIndex.js" type="text/javascript" ></script>
+	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 <body>
 	<div class="header">
 		<div class="handle">
-			<h1>Luke Foundation, Inc</h1>
+			<span onclick="back()" ><h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" /></h1>
+			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
 	<div class="content">
@@ -38,6 +41,32 @@
 				$result3 = mysqli_query($link, $query3);
 				$open2 = mysqli_fetch_array($result2);
 				$open3 = mysqli_fetch_array($result3);
+			
+				if($open2['Evaluation_Date']=='0000-00-00'){
+					$eDate = "N/A";
+				}else{
+					$eDate = $open2['Evaluation_Date'];
+				}
+				if($open2['Admission_Date']=='0000-00-00'){
+					$aDate = "N/A";
+				}else{
+					$aDate = $open2['Admission_Date'];
+				}
+				if($open2['Surgery_Date']=='0000-00-00'){
+					$sDate = "N/A";
+				}else{
+					$sDate = $open2['Surgery_Date'];
+				}
+				if($open2['Discharge_Date']=='0000-00-00'){
+					$dDate = "N/A";
+				}else{
+					$dDate = $open2['Discharge_Date'];
+				}
+				if($open2['Follow_Up_Date']=='0000-00-00'){
+					$fDate = "N/A";
+				}else{
+					$fDate = $open2['Follow_Up_Date'];
+				}
 
 				echo "
 				<h1>".$open3['patient_fname']." ".$open3['patient_lname']."</h1>
@@ -76,31 +105,31 @@
 					<td><b>Hospital</b></td>
 					<td>".$open2['Hospital_Bill']."</td>
 					<td><b>Evaluation Date</b></td>
-					<td>".$open2['Evaluation_Date']."</td>
+					<td>".$eDate."</td>
 				</tr>
 				<tr>
 					<td><b>Laboratory</b></td>
 					<td>".$open2['Lab_fee']."</td>
 					<td><b>Admission Date</b></td>
-					<td>".$open2['Admission_Date']."</td>
+					<td>".$aDate."</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td><b>Surgery Date</b></td>
-					<td>".$open2['Surgery_Date']."</td>
+					<td>".$sDate."</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td><b>Discharge Date</b></td>
-					<td>".$open2['Discharge_Date']."</td>
+					<td>".$dDate."</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td><b>Follow-Up Date</b></td>
-					<td>".$open2['Follow_Up_Date']."</td>
+					<td>".$fDate."</td>
 				</tr>
 			</table>";
 			?>
