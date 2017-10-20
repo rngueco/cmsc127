@@ -3,14 +3,14 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="backToIndex.js" type="text/javascript" ></script>
+	<script src="script/backToIndex.js" type="text/javascript" ></script>
 	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 
 <?php
 include 'link.php';
 $pID = $_REQUEST["PID"];
-$query = "DELETE FROM SURGERY where patient_id='$pID'";
+$query = "DELETE FROM CLSURGERY where patient_id='$pID'";
 $result = mysqli_query($link, $query);
 ?>
 
