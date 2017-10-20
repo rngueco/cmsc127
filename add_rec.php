@@ -2,8 +2,8 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="add_rec.js" type="text/javascript" ></script>
-	<script src="backToIndex.js" type="text/javascript" ></script>
+	<script src="script/add_rec.js" type="text/javascript" ></script>
+	<script src="script/backToIndex.js" type="text/javascript" ></script>
 	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 <body>
