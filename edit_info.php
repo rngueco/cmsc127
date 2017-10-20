@@ -2,7 +2,7 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="backToIndex.js" type="text/javascript" ></script>
+	<script src="script/backToIndex.js" type="text/javascript" ></script>
 	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 <body>
@@ -18,7 +18,7 @@
 			<?php 
 				include 'link.php';
 				$id = $_POST['pid'];
-				$query = "SELECT * FROM surgery WHERE patient_id = $id";
+				$query = "SELECT * FROM clsurgery WHERE patient_id = $id";
 				$query2 = "SELECT * FROM patient WHERE patient_id = $id";
 				$result = mysqli_query($link, $query);
 				$result2 = mysqli_query($link, $query2);
