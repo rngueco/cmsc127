@@ -2,7 +2,7 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="backToIndex.js" type="text/javascript" ></script>
+	<script src="script/backToIndex.js" type="text/javascript" ></script>
 	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 <body>
@@ -30,12 +30,12 @@
 				$discharge = $_POST['discharge'];
 				$follow = $_POST['follow'];
 
-				$query = "UPDATE surgery SET Cl_Lip = '$clip', Cl_Palate = '$cpalate', Operation = '$operation', 
+				$query = "UPDATE clsurgery SET Cl_Lip = '$clip', Cl_Palate = '$cpalate', Operation = '$operation', 
 				Repair = '$repair', Surgeon = '$surgeon', Hospital_Bill = '$hospital', Lab_fee = '$lab', Evaluation_Date = '$eval', 
 				Admission_Date = '$admission', Surgery_Date = '$surgery', Discharge_Date = '$discharge', Follow_Up_Date = '$follow' WHERE patient_id = $id";
 				$result = mysqli_query($link, $query);
 
-				$query2 = "SELECT * FROM surgery WHERE patient_id = $id";
+				$query2 = "SELECT * FROM clsurgery WHERE patient_id = $id";
 				$query3 = "SELECT * FROM patient WHERE patient_id = $id";
 				$result2 = mysqli_query($link, $query2);
 				$result3 = mysqli_query($link, $query3);
