@@ -36,7 +36,7 @@ INSERT INTO PATIENT (patient_fname, patient_lname, patient_minitial, age, sex, p
 ('Jemimah','Perez', 'I', 20, 'f', '#45 Gomburza Street, Laguna City', '#45 Gumamela Street, Baguio City', 'Single', '2012-09-01', 'Baguio City', 'Anglican', 'Clerk', 2000, 09220946553, 'College'),
 ('Tonio','Fernandez', 'J', 30, 'm', '#56 Gombuza Highway, Bataan', '#23 Michael Jordan Rd., NBA City', 'Married', '2009-09-28', 'Laguna', 'Mormon', 'Unemployed', 3000, 09214546553, 'High School');
 
-create table Surgery(
+create table clsurgery(
 	sCode int not null auto_increment,
 	patient_id int unsigned not null,
 	Cl_Lip varchar(50),
@@ -55,7 +55,7 @@ create table Surgery(
 	foreign key(patient_id) references patient(patient_id) on update cascade on delete cascade
 );
 
-INSERT INTO SURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, Evaluation_Date, Admission_Date, Surgery_Date, Discharge_Date, Follow_Up_Date, Hospital_Bill, Lab_fee) VALUES 
+INSERT INTO CLSURGERY(patient_id, Cl_Lip, Cl_Palate, Operation, Repair, Surgeon, Evaluation_Date, Admission_Date, Surgery_Date, Discharge_Date, Follow_Up_Date, Hospital_Bill, Lab_fee) VALUES 
 (1, '+', '+', 'Lorem ipsum', 'Duis ut bibendum', 'Dr. Who', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 1000.50),
 (3, '+', '-', 'Dolor sit amet', 'Quisque a luctus', 'Dr. Strange', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
 (2, '+', '-', 'Praesent nec condimentum', 'Vestibulum ante ipsum', 'Dr. Valdez', '2010-01-02', '2009-01-04', '2010-01-02', '2010-01-02', '2012-01-02', 500.75, 2000.50),
