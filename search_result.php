@@ -3,7 +3,7 @@
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="backToIndex.js" type="text/javascript" ></script>
+	<script src="script/backToIndex.js" type="text/javascript" ></script>
 	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
 </head>
 <body>
@@ -31,8 +31,8 @@
 				$fname = $_REQUEST["fname"];
 				$surgeon = $_REQUEST["surgeon"];
 
-				$query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, surgery.Operation, surgery.Repair, surgery.Surgeon 
-				FROM patient RIGHT JOIN surgery ON patient.patient_id = surgery.patient_id";
+				$query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, clsurgery.Operation, clsurgery.Repair, clsurgery.Surgeon 
+				FROM patient RIGHT JOIN clsurgery ON patient.patient_id = clsurgery.patient_id";
     			
     			$conditions = array();
 
@@ -43,7 +43,7 @@
 			      $conditions[] = "patient.patient_fname='$fname'";
 			    }
 			    if($surgeon != "") {
-			      $conditions[] = "surgery.surgeon='$surgeon'";
+			      $conditions[] = "clsurgery.surgeon='$surgeon'";
 			    }
 
 			    $sql = $query;
