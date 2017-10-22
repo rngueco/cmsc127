@@ -5,7 +5,7 @@ html,body{
 	height:100%; 
 	width:100%;
 	color: #2C3E50;
-	background: #E9E9E9;
+	background: #ffffff;
 	overflow: auto;
 }
 .body{
@@ -15,12 +15,13 @@ html,body{
 }
 .header{
 	display: block;
-	background: #2ECC71;
+	background: #f8f8f8;
 	overflow: auto;
 	padding-left: 20px;
 	padding-right: 20px;
 	letter-spacing: 4px;
-	color: #ECF0F1;
+	color: #2C3E50;
+	border-bottom: 1px solid #e8e8e8;
 }
 .header .handle{
 	display: inline-block;
@@ -32,42 +33,57 @@ html,body{
 .header h1{
 	font-size: 18px;
 }
-.header .navi{
-	display: inline-block;
-	float: right;
-	width: 40%;
-	line-height: 35px;
-	text-align: right;
-}
-.header .navi a{
-	display: inline-block;
-	margin-right: 7px;
-	text-decoration: none;
-	text-transform: lowercase;
-	font-weight: normal;
-	color: #2C3E50;
-	font-size: 14px;
-}
 .content{
 	height: 100%;
-	background: #E9E9E9;
-	padding-top: 10px;
+	background: #ffffff;
 	margin-bottom: 30px;
 }
-.content a#addrec{
-	display: inline-block;
+.content .left-panel{
+	display: block;
+	float: left;
+	height: 100%;
+	width: 15%;
+	background: #f8f8f8;
+}
+.content .left-panel a{
+	display: block;
 	text-decoration: none;
 	vertical-align: center;
-	color: #2C3E50;
-	margin-bottom: 20px;
+	color: #2e7cbe;
+	border-bottom: 1px solid #e8e8e8;
+	width: 100%;
+	overflow: auto;
+	line-height: 40px;
 }
-.content img{
+.content .left-panel img{
 	width: 15px;
 	height: 15px;
 }
-.content a#addrec img#file{
-	width: 14px;
-	height: 14px;
+.content .right-panel{
+	display: block;
+	float: right;
+	height: 100%;
+	width: 84%;
+}
+.content .right-panel a#home{
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	vertical-align: bottom;
+	border: 1px solid #2C3E50;
+	border-radius: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #2C3E50;
+}
+.content .right-panel img{
+	display: block;
+	height: 150px;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .content a button#simple{
 	background-color: #E9E9E9;
