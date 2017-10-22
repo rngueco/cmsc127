@@ -4,12 +4,12 @@
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="script/backToIndex.js" type="text/javascript" ></script>
-	<link href="images/LukeLogo.jpg" type="image/gif" rel="shortcut icon" />
+	<link href="images/favi.png" type="image/png" rel="icon" />
 </head>
 <body>
 	<div class="header">
 		<div class="handle">
-			<span onclick="back()" ><h1><img src="images/LukeLogo.jpg" width="40px" style="float:left" /></h1>
+			<span onclick="back()" ><h1><img src="images/LukeLogo.png" width="40px" style="float:left" /></h1>
 			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
