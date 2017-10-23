@@ -12,7 +12,14 @@
 			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
-	<div class="content">
+	<div class="content"><div class="left-panel">
+			<a href="index.php">&nbsp;&nbsp;<img src="images/home.png">&nbsp; Home</a>
+			<a href="view_recs.php">&nbsp;&nbsp;<img src="images/folder.png">&nbsp; View Records</a>
+			<a href="search.php">&nbsp;&nbsp;<img src="images/search.png">&nbsp; Search Records</a>
+			<a href="add_rec.php">&nbsp;&nbsp;<img src="images/add.png">&nbsp; New Record</a>
+			<a href="intake.php">&nbsp;&nbsp;<img src="images/file.png">&nbsp; New Intake Form</a>
+		</div>
+		<div class="right-panel">
 		<center>
 			<form action='update_info.php' method='post'>
 			<?php 
@@ -27,7 +34,7 @@
 
 				echo "
 				<h1>Edit Surgery Information for ".$open2['patient_fname']." ".$open2['patient_lname']."</h1>
-				<img src='images/save.png'><input type='submit' value='Save details' id='save'><input type='hidden' name='pid' value='".$id."'>
+				<input type='submit' value='Save details' id='save'><input type='hidden' name='pid' value='".$id."'>
 				<table>
 				<tr>
 					<th colspan='2'>Details</th>
@@ -93,6 +100,8 @@
 			?>
 			</form>
 		</center>
+		&nbsp;<br />&nbsp;
+		</div>
 	</div>
 </body>
 </html>
