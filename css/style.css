@@ -44,6 +44,7 @@ html,body{
 	height: 100%;
 	width: 15%;
 	background: #f8f8f8;
+	font-size: 14px;
 }
 .content .left-panel a{
 	display: block;
@@ -56,14 +57,18 @@ html,body{
 	line-height: 40px;
 }
 .content .left-panel img{
-	width: 15px;
-	height: 15px;
+	width: 13px;
+	height: 13px;
 }
 .content .right-panel{
 	display: block;
 	float: right;
 	height: 100%;
 	width: 84%;
+	padding-top: 20px;
+}
+.content .right-panel h1{
+	font-weight: normal;
 }
 .content .right-panel a#home{
 	display: inline-block;
@@ -74,15 +79,16 @@ html,body{
 	border-radius: 20px;
 	text-transform: uppercase;
 	text-decoration: none;
+	font-size: 14px;
 	color: #2C3E50;
 }
 .content .right-panel img{
 	display: block;
-	height: 150px;
-	width: 150px;
+	height: 75px;
+	width: 75px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
+	margin-top: 50px;
 	margin-bottom: 10px;
 }
 .content a button#simple{
@@ -97,11 +103,6 @@ html,body{
 .content form{
 	display: inline;
 }
-.content form input{
-  	background: none;
-  	border: none;
-  	font-size: 14px;
-}
 .content form input#save{
 	vertical-align: center;
   	margin-bottom: 20px;
@@ -113,9 +114,9 @@ html,body{
 .content form input#summary{
 	color: #3498DB;
 }
-.content table{
+.content .right-panel table{
 	background: white;
-	width: 80%;
+	width: 90%;
 	border-collapse: collapse;
 	font-size: 14px;
    	border: 1px solid #E9E9E9;
