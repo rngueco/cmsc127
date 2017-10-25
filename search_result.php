@@ -79,7 +79,6 @@
 				FROM patient RIGHT JOIN clsurgery ON patient.patient_id = clsurgery.patient_id";
     			
     			$conditions = array();
-    			$conditionsdates = array();
     			if($lname != "") {
       			$conditions[] = "patient.patient_lname='$lname'";
 			    }
@@ -104,42 +103,37 @@
  			    if(($evalyear1==0 || $evalmonth1==0 || $evalday1==0) || ($evalyear2==0 || $evalmonth2==0 || $evalday2==0)){
 				}
 				else{
-				$edate1 = $evalyear1."-".$evalmonth1."-".$evalyear1;
-				$edate2 = $evalyear2."-".$evalmonth2."-".$evalyear2;
-				$conditionsdates[] = $edate1;
-				$conditionsdates[] = $edate2;
+				$edate1 = $evalyear1."-".$evalmonth1."-".$evalday1;
+				$edate2 = $evalyear2."-".$evalmonth2."-".$evalday2;
+					$conditions[] = "clsurgery.evaluation_date between '$edate1' and '$edate2';";
 				}
 				if(($adyear1==0 || $admonth1==0 || $adday1==0) || ($adyear2==0 || $admonth2==0 || $adday2==0)){
 				}
 				else{
-				$edate1 = $adyear1."-".$admonth1."-".$adyear1;
-				$edate2 = $adyear2."-".$admonth2."-".$adyear2;
-				$conditionsdates[] = $edate1;
-				$conditionsdates[] = $edate2;
+				$edate1 = $adyear1."-".$admonth1."-".$adday1;
+				$edate2 = $adyear2."-".$admonth2."-".$adday2;
+					$conditions[] = "clsurgery.admission_date between '$edate1' and '$edate2';";
 				}
 				if(($suryear1==0 || $surmonth1==0 || $surday1==0) || ($suryear2==0 || $surmonth2==0 || $surday2==0)){
 				}
 				else{
-				$edate1 = $suryear1."-".$surmonth1."-".$suryear1;
-				$edate2 = $suryear2."-".$surmonth2."-".$suryear2;
-				$conditionsdates[] = $edate1;
-				$conditionsdates[] = $edate2;
+				$edate1 = $suryear1."-".$surmonth1."-".$surday1;
+				$edate2 = $suryear2."-".$surmonth2."-".$surday2;
+				$conditions[] = "clsurgery.surgery_date between '$edate1' and '$edate2';";
 				}
 				if(($disyear1==0 || $dismonth1==0 || $disday1==0) || ($disyear2==0 || $dismonth2==0 || $disday2==0)){
 				}
 				else{
-				$edate1 = $disyear1."-".$dismonth1."-".$disyear1;
-				$edate2 = $disyear2."-".$dismonth2."-".$disyear2;
-				$conditionsdates[] = $edate1;
-				$conditionsdates[] = $edate2;
+				$edate1 = $disyear1."-".$dismonth1."-".$disday1;
+				$edate2 = $disyear2."-".$dismonth2."-".$disday2;
+				$conditions[] = "clsurgery.discharge_date between '$edate1' and '$edate2';";
 				}
 				if(($fupyear1==0 || $fupmonth1==0 || $fupday1==0) || ($fupyear2==0 || $fupmonth2==0 || $fupday2==0)){
 				}
 				else{
-				$edate1 = $fupyear1."-".$fupmonth1."-".$fupyear1;
-				$edate2 = $fupyear2."-".$fupmonth2."-".$fupyear2;
-				$conditionsdates[] = $edate1;
-				$conditionsdates[] = $edate2;
+				$edate1 = $fupyear1."-".$fupmonth1."-".$fupday1;
+				$edate2 = $fupyear2."-".$fupmonth2."-".$fupday2;
+				$conditions[] = "clsurgery.follow_up_date between '$edate1' and '$edate2';";
 				}
 
 
@@ -149,7 +143,7 @@
 			    if (count($conditions) > 0) {
 			      $sql .= " WHERE " . implode(' AND ', $conditions);
 			    }
-			    
+
 			    $result = mysqli_query($link, $sql);
 
 				while($open = mysqli_fetch_array($result)){
