@@ -39,12 +39,47 @@
 				$lname = $_REQUEST["lname"];
 				$fname = $_REQUEST["fname"];
 				$surgeon = $_REQUEST["surgeon"];
+				$clip = $_REQUEST["clip"];
+				$cplate = $_REQUEST["cpalate"];
+				$operation = $_REQUEST["operation"];
+				$repair = $_REQUEST["repair"];
+				$evalmonth1 = $_REQUEST["evalmonth1"];
+				$evalday1 = $_REQUEST["evalday1"];
+				$evalyear1 = $_REQUEST["evalyear1"];
+				$evalmonth2 = $_REQUEST["evalmonth2"];
+				$evalyear2 = $_REQUEST["evalyear2"];
+				$evalday2 = $_REQUEST["evalday2"];
+				$admonth1 = $_REQUEST["admonth1"];
+				$adday1 = $_REQUEST["adday1"];
+				$adyear1 = $_REQUEST["adyear1"];
+				$admonth2 = $_REQUEST["admonth2"];
+				$adyear2 = $_REQUEST["adyear2"];
+				$adday2 = $_REQUEST["adday2"];
+				$surmonth1 = $_REQUEST["surmonth1"];
+				$surday1 = $_REQUEST["surday1"];
+				$suryear1 = $_REQUEST["suryear1"];
+				$surmonth2 = $_REQUEST["surmonth2"];
+				$suryear2 = $_REQUEST["suryear2"];
+				$surday2 = $_REQUEST["surday2"];
+				$dismonth1 = $_REQUEST["dismonth1"];
+				$disday1 = $_REQUEST["disday1"];
+				$disyear1 = $_REQUEST["disyear1"];
+				$dismonth2 = $_REQUEST["dismonth2"];
+				$disyear2 = $_REQUEST["disyear2"];
+				$disday2 = $_REQUEST["disday2"];
+				$fupmonth1 = $_REQUEST["fupmonth1"];
+				$fupday1 = $_REQUEST["fupday1"];
+				$fupyear1 = $_REQUEST["fupyear1"];
+				$fupmonth2 = $_REQUEST["fupmonth2"];
+				$fupyear2 = $_REQUEST["fupyear2"];
+				$fupday2 = $_REQUEST["fupday2"];
+
 
 				$query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, clsurgery.Operation, clsurgery.Repair, clsurgery.Surgeon 
 				FROM patient RIGHT JOIN clsurgery ON patient.patient_id = clsurgery.patient_id";
     			
     			$conditions = array();
-
+    			$conditionsdates = array();
     			if($lname != "") {
       			$conditions[] = "patient.patient_lname='$lname'";
 			    }
@@ -54,12 +89,67 @@
 			    if($surgeon != "") {
 			      $conditions[] = "clsurgery.surgeon='$surgeon'";
 			    }
+			    if($clip != ""){
+			      $conditions[] = "clsurgery.cl_lip='$clip'";
+ 			    }
+ 			    if($cpalate != ""){
+ 			      $conditions[] = "clsurgery.cl_palate='$cpalate'";
+ 			    }
+ 			    if($operation != ""){
+ 			      $conditions[] = "clsurgery.operation='$operation'";
+ 			    }
+ 			    if($repair != ""){
+ 			      $conditions[] = "clsurgery.repair='$repair'";
+ 			    }
+ 			    if(($evalyear1==0 || $evalmonth1==0 || $evalday1==0) || ($evalyear2==0 || $evalmonth2==0 || $evalday2==0)){
+				}
+				else{
+				$edate1 = $evalyear1."-".$evalmonth1."-".$evalyear1;
+				$edate2 = $evalyear2."-".$evalmonth2."-".$evalyear2;
+				$conditionsdates[] = $edate1;
+				$conditionsdates[] = $edate2;
+				}
+				if(($adyear1==0 || $admonth1==0 || $adday1==0) || ($adyear2==0 || $admonth2==0 || $adday2==0)){
+				}
+				else{
+				$edate1 = $adyear1."-".$admonth1."-".$adyear1;
+				$edate2 = $adyear2."-".$admonth2."-".$adyear2;
+				$conditionsdates[] = $edate1;
+				$conditionsdates[] = $edate2;
+				}
+				if(($suryear1==0 || $surmonth1==0 || $surday1==0) || ($suryear2==0 || $surmonth2==0 || $surday2==0)){
+				}
+				else{
+				$edate1 = $suryear1."-".$surmonth1."-".$suryear1;
+				$edate2 = $suryear2."-".$surmonth2."-".$suryear2;
+				$conditionsdates[] = $edate1;
+				$conditionsdates[] = $edate2;
+				}
+				if(($disyear1==0 || $dismonth1==0 || $disday1==0) || ($disyear2==0 || $dismonth2==0 || $disday2==0)){
+				}
+				else{
+				$edate1 = $disyear1."-".$dismonth1."-".$disyear1;
+				$edate2 = $disyear2."-".$dismonth2."-".$disyear2;
+				$conditionsdates[] = $edate1;
+				$conditionsdates[] = $edate2;
+				}
+				if(($fupyear1==0 || $fupmonth1==0 || $fupday1==0) || ($fupyear2==0 || $fupmonth2==0 || $fupday2==0)){
+				}
+				else{
+				$edate1 = $fupyear1."-".$fupmonth1."-".$fupyear1;
+				$edate2 = $fupyear2."-".$fupmonth2."-".$fupyear2;
+				$conditionsdates[] = $edate1;
+				$conditionsdates[] = $edate2;
+				}
+
+
+
 
 			    $sql = $query;
 			    if (count($conditions) > 0) {
 			      $sql .= " WHERE " . implode(' AND ', $conditions);
 			    }
-
+			    
 			    $result = mysqli_query($link, $sql);
 
 				while($open = mysqli_fetch_array($result)){
