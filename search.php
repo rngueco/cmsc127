@@ -42,11 +42,30 @@
 				</tr>
 				<tr>
 					<td>By type of cleft lip </td>
-					<td colspan="2"><input type = 'text' name ="clip" placeholder = 'Enter type of cleft lip'> </td>
+					<td>
+						<select name="clip">
+  							<option value="Complete unilateral cleft lip - right">Complete unilateral cleft lip - right</option>
+  							<option value="Complete unilateral cleft lip - left">Complete unilateral cleft lip - left</option>
+  							<option value="Incomplete unilateral cleft lip - right">Incomplete unilateral cleft lip - right</option>
+  							<option value="Incomplete unilateral cleft lip - left">Incomplete unilateral cleft lip - left</option>
+							<option value="Complete bilateral cleft lip">Complete bilateral cleft lip</option>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<td>By type of cleft palate </td>
-					<td colspan="2"><input type = 'text' name ="cpalate" placeholder = 'Enter type of cleft palate'> </td>
+					<td>
+						<select name="cpalate">
+  							<option value="Complete unilateral cleft palate - right">Complete unilateral cleft palate - right</option>
+  							<option value="Complete unilateral cleft palate - left">Complete unilateral cleft palate - left</option>
+  							<option value="Incomplete unilateral cleft palate - right">Incomplete unilateral cleft palate - right</option>
+  							<option value="Incomplete unilateral cleft palate - left">Incomplete unilateral cleft palate - left</option>
+							<option value="Complete bilateral cleft palate">Complete bilateral cleft palate</option>
+							<option value="Incomplete bilateral cleft palate">Incomplete bilateral cleft palate</option>
+							<option value="Submucous cleft - right">Submucous cleft - right</option>
+							<option value="Submucous cleft - left">Submucous cleft - left</option>
+						</select>
+					</td>	
 				</tr>
 				<tr>
 					<td>By type of operation</td>
