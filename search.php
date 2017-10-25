@@ -232,7 +232,7 @@
 				</tr>
 				<tr>
 					<td>By discharge date</td>
-					<td>From: <select name = "admonth1">
+					<td>From: <select name = "dismonth1">
 								<option value="01">January</option>
 								<option value="02">February</option>
 								<option value="03">March</option>
