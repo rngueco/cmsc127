@@ -40,7 +40,7 @@
 				$fname = $_REQUEST["fname"];
 				$surgeon = $_REQUEST["surgeon"];
 				$clip = $_REQUEST["clip"];
-				$cplate = $_REQUEST["cpalate"];
+				$cpalate = $_REQUEST["cpalate"];
 				$operation = $_REQUEST["operation"];
 				$repair = $_REQUEST["repair"];
 				$evalmonth1 = $_REQUEST["evalmonth1"];
