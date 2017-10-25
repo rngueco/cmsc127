@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div class="content">
-		<div class="left-panel">
+		<div class="left-panel" id="intake">
 			<a href="index.php">&nbsp;&nbsp;<img src="images/home.png">&nbsp; Home</a>
 			<a href="view_recs.php">&nbsp;&nbsp;<img src="images/folder.png">&nbsp; View Records</a>
 			<a href="search.php">&nbsp;&nbsp;<img src="images/search.png">&nbsp; Search Records</a>
