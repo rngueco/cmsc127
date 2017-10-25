@@ -26,53 +26,35 @@
 			<form action='search_result.php' action='post'>
 			<table>
 				<tr>
-					<th colspan="2">Select filter</th>
+					<th colspan="3">Select filter</th>
 				</tr>
 				<tr>
 					<td width="30%">By patient's last name</td>
-					<td><input type='text' name="lname" placeholder='Enter last name'></td>
+					<td colspan="2"><input type='text' name="lname" placeholder='Enter last name'></td>
 				</tr>
 				<tr>
 					<td>By patient's first name</td>
-					<td><input type='text' name="fname" placeholder='Enter first name'></td>
+					<td colspan="2"><input type='text' name="fname" placeholder='Enter first name'></td>
 				</tr>
 				<tr>
 					<td>By surgeon</td>
-					<td><input type='text' name="surgeon" placeholder='Enter surgeon'></td>
+					<td colspan="2"><input type='text' name="surgeon" placeholder='Enter surgeon'></td>
 				</tr>
 				<tr>
 					<td>By type of cleft lip </td>
-					<td>
-						<select name="clip">
-  							<option value="Complete unilateral cleft lip - right">Complete unilateral cleft lip - right</option>
-  							<option value="Complete unilateral cleft lip - left">Complete unilateral cleft lip - left</option>
-  							<option value="Incomplete unilateral cleft lip - right">Incomplete unilateral cleft lip - right</option>
-  							<option value="Incomplete unilateral cleft lip - left">Incomplete unilateral cleft lip - left</option>
-							<option value="Complete bilateral cleft lip">Complete bilateral cleft lip</option>
-						</select>
-					</td>
-					</tr>
+					<td colspan="2"><input type = 'text' name ="clip" placeholder = 'Enter type of cleft lip'> </td>
+				</tr>
 				<tr>
 					<td>By type of cleft palate </td>
-					<td><select name="cpalate">
-  							<option value="Complete unilateral cleft palate - right">Complete unilateral cleft palate - right</option>
-  							<option value="Complete unilateral cleft palate - left">Complete unilateral cleft palate - left</option>
-  							<option value="Incomplete unilateral cleft palate - right">Incomplete unilateral cleft palate - right</option>
-  							<option value="Incomplete unilateral cleft palate - left">Incomplete unilateral cleft palate - left</option>
-							<option value="Complete bilateral cleft palate">Complete bilateral cleft palate</option>
-							<option value="Incomplete bilateral cleft palate">Incomplete bilateral cleft palate</option>
-							<option value="Submucous cleft - right">Submucous cleft - right</option>
-							<option value="Submucous cleft - left">Submucous cleft - left</option>
-							</select>
-					</td>
+					<td colspan="2"><input type = 'text' name ="cpalate" placeholder = 'Enter type of cleft palate'> </td>
 				</tr>
 				<tr>
 					<td>By type of operation</td>
-					<td><input type = 'text' name ="operation" placeholder = 'Enter type of operation'> </td>
+					<td colspan="2"><input type = 'text' name ="operation" placeholder = 'Enter type of operation'> </td>
 				</tr>
 				<tr>
 					<td>By type of repair</td>
-					<td><input type = 'text' name ="repair" placeholder = 'Enter type of repair'> </td>
+					<td colspan="2"><input type = 'text' name ="repair" placeholder = 'Enter type of repair'> </td>
 				</tr>
 				<tr>
 					<td>By evaluation date</td>
@@ -306,7 +288,6 @@
 						</select></td>
 
 				</tr>
-				-
 				<tr>
 					<td>By follow-up date</td>
 					<td>From: <select name = "fupmonth1">
@@ -365,12 +346,12 @@
 						</select></td>
 
 				</tr>
-				-
 				<tr>
-					<td colspan="2"><input type='submit' value='Search'></td>
+					<td colspan="3"><center><input type='submit' value='Search'></center></td>
 				</tr>
 			<table>
 			</form>
+			<br /> <br />
 		</center>
 		</div>
 	</div>
