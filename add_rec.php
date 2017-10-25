@@ -128,7 +128,14 @@
 					</tr>
 					<tr>
 						<td>Type of cleft lip</td>
-						<td><input type="text" name="clip"></td>
+						<td><select name="clip">
+  							<option value="Complete unilateral cleft lip - right">Complete unilateral cleft lip - right</option>
+  							<option value="Complete unilateral cleft lip - left">Complete unilateral cleft lip - left</option>
+  							<option value="Incomplete unilateral cleft lip - right">Incomplete unilateral cleft lip - right</option>
+  							<option value="Incomplete unilateral cleft lip - left">Incomplete unilateral cleft lip - left</option>
+							<option value="Complete bilateral cleft lip">Complete bilateral cleft lip</option>
+							</select>
+						</td>
 						<td>Discharge Date</td>
 						<td><select name = "dismonth">
 								<option value="01">January</option>
@@ -160,7 +167,16 @@
 					</tr>
 					<tr>
 						<td>Type of cleft palate</td>
-						<td><input type="text" name="cpalate"></td>
+						<td><select name="cpalate">
+  							<option value="Complete unilateral cleft palate - right">Complete unilateral cleft palate - right</option>
+  							<option value="Complete unilateral cleft palate - left">Complete unilateral cleft palate - left</option>
+  							<option value="Incomplete unilateral cleft palate - right">Incomplete unilateral cleft palate - right</option>
+  							<option value="Incomplete unilateral cleft palate - left">Incomplete unilateral cleft palate - left</option>
+							<option value="Complete bilateral cleft palate">Complete bilateral cleft palate</option>
+							<option value="Incomplete bilateral cleft palate">Incomplete bilateral cleft palate</option>
+							<option value="Submucous cleft - right">Submucous cleft - right</option>
+							<option value="Submucous cleft - left">Submucous cleft - left</option>
+							</select></td>
 						<td>Follow-up Date</td>
 						<td><select name = "fupmonth">
 								<option value="01">January</option>
