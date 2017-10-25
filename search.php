@@ -42,7 +42,7 @@
 				</tr>
 				<tr>
 					<td>By type of cleft lip </td>
-					<td>
+					<td colspan = "2">
 						<select name="clip">
   							<option value="Complete unilateral cleft lip - right">Complete unilateral cleft lip - right</option>
   							<option value="Complete unilateral cleft lip - left">Complete unilateral cleft lip - left</option>
@@ -54,7 +54,7 @@
 				</tr>
 				<tr>
 					<td>By type of cleft palate </td>
-					<td>
+					<td colspan = "2">
 						<select name="cpalate">
   							<option value="Complete unilateral cleft palate - right">Complete unilateral cleft palate - right</option>
   							<option value="Complete unilateral cleft palate - left">Complete unilateral cleft palate - left</option>
