@@ -41,7 +41,15 @@ html,body{
 .content .left-panel{
 	display: block;
 	float: left;
-	height: 100%;
+	height: 200%;
+	width: 15%;
+	background: #f8f8f8;
+	font-size: 14px;
+}
+.content #intake{
+	display: block;
+	float: left;
+	height: 500%;
 	width: 15%;
 	background: #f8f8f8;
 	font-size: 14px;
