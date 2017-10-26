@@ -25,92 +25,31 @@
 				<h1>New Intake Form</h1>
 				
 				<form onsubmit="new_intake()" method="post">
-					<table>
+					<table><!-- IDENTIFYING INFORMATION -->
 						<tr>
-							<th colspan="2">Identifying Information</th>
-							<th colspan="2">Educational Background</th>
+							<th colspan="4"><center><h2>Identifying Information</h2></center></th>
 						</tr>
-						
 						<tr>
 							<td>First Name</td>
 							<td><input type="text" name="fname"> </td>
-							
-							<td>Educational Background</td>
-							<td><select name = "educBack" class = "box_size">
-								<option value="None" selected="selected">None</option>
-								<option value="Primary">Primary</option>
-								<option value="Secondary">Secondary</option>
-								<option value="Tertiary">Tertiary</option>
-								<option value="Others" >Others</option>
-								</select>
-							</td>
-						</tr>
-						
-						<tr>
 							<td>Last Name</td>
-							<td><input type="text" name="lname"></td>	
-							
-							<th colspan="2">Type of Cleft</th>				
+							<td><input type="text" name="lname"></td>
 						</tr>
-						
 						<tr>
 							<td> Middle Initial </td>
 							<td><input type="text" name="minitial"></td>
-							
-							<td>Cleft Lip</td>
-							<td><select name = "cl_lip" class = "box_size">
-								<option value="None" selected="selected">None</option>
-								<option value="Incomplete Unilateral Right">Incomplete Unilateral Right</option>
-								<option value="Incomplete Unilateral Left">Incomplete Unilateral Left</option>
-								<option value="Complete Unilateral Right">Complete Unilateral Right</option>
-								<option value="Complete Unilateral Left">Complete Unilateral Left</option>
-								<option value="Complete Bilateral">Complete Bilateral</option>
-								<option value="Incomplete Bilateral">Incomplete Bilateral</option>
-								</select>
-							</td>
-							
-							
+							<td>CS</td>
+							<td><input type="text" name="cs"></td>
 						</tr>
-						
 						<tr>
 							<td>Age</td>
-							<td><input type="number" name="age"></td>	
-							
-							<td>Cleft Palate</td>
-							<td><select name = "cl_palate" class = "box_size">
-								<option value="None" selected="selected">None</option>
-								<option value="Complete Unilateral Right">Complete Unilateral Right</option>
-								<option value="Complete Unilateral Left">Complete Unilateral Left</option>
-								<option value="Incomplete Unilateral Right">Incomplete Unilateral Right</option>
-								<option value="Incomplete Unilateral Left">Incomplete Unilateral Left</option>
-								<option value="Complete Bilateral">Complete Bilateral</option>
-								<option value="Incomplete Bilateral">Incomplete Bilateral</option>
-								<option value="Submucous - left">Submucous - left</option>
-								<option value="Submucous - right">Submucous - right</option>
-								</select>
-							</td>
-						</tr>
-						
-						<tr>
+							<td><input type="number" name="age"></td>
 							<td>Gender</td>
 							<td>
 								<input type="radio" name="gender" value="M" checked> Male<br>
 								<input type="radio" name="gender" value="F"> Female<br>
 							</td>
-							
-							<th colspan="2">Problems Presented</th>
 						</tr>
-						
-						<tr>
-							<td>CS</td>
-							<td><input type="text" name="cs"></td>	
-							
-							
-							<td colspan="2" rowspan = "5">
-								<textarea class = "paragraph_size" name="prob_present" rows = "9"></textarea>
-							</td>
-						</tr>
-						
 						<tr>
 							<td>Birthdate</td>
 							<td>
@@ -141,70 +80,110 @@
 										<?php endfor; ?>
 									<option value="00" selected="selected">----</option>
 								</select>
+							</td>
+							<td>Birthplace</td>
+							<td colspan="1">
+								<textarea class = "paragraph_size" name="birthplace" rows = "4"></textarea>
 							</td>	
 						</tr>
-						
-						<tr>
-							<td>Birthplace</td>
-							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="birthplace" rows = "4"></textarea>
-							</td>						
-						</tr>
-						
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						
 						<tr>
 							<td>Provincial Address</td>
-							<td colspan="1" rowspan = "2">
+							<td colspan="1">
 								<textarea class = "paragraph_size" name="prov_address" rows = "4"></textarea>
-							</td>		
-							
-							<th colspan="2">Historical Background</th>							
-						</tr>
-						
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						
-						<tr>
+							</td>
 							<td>Present Address</td>
-							<td colspan="1" rowspan = "2">
+							<td colspan="1">
 								<textarea class = "paragraph_size" name="present_address" rows = "4"></textarea>
-							</td>	
-							
-							<td colspan="2" rowspan = "6">
+							</td>
+						</tr>
+						<tr>
+							<td>Religion</td>
+							<td><input type="text" name="religion"></td>
+							<td>Occupation</td>
+							<td><input type="text" name="occupation"></td>
+						</tr>
+						<tr>
+							<td>Contact Number</td>
+							<td><input type="text" name="contact_number"></td>
+							<td>Monthly Income</td>
+							<td><input type="number" name="monthly_income"></td>
+						</tr>
+					</table>
+					<br /><br />
+					<table><!-- EDUCATIONAL BACKGROUND -->
+						<tr>
+							<th colspan="4"><center><h2>Educational Background</h2></center></th>
+						</tr>
+						<tr>
+							<td>Educational Background</td>
+							<td><select name = "educBack" class = "box_size">
+								<option value="None" selected="selected">None</option>
+								<option value="Primary">Primary</option>
+								<option value="Secondary">Secondary</option>
+								<option value="Tertiary">Tertiary</option>
+								<option value="Others" >Others</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<br /><br />
+					<table><!-- TYPE OF CLEFT -->
+						<tr>	
+							<th colspan="4"><center><h2>Type of Cleft</h2></center></th>				
+						</tr>
+						<tr>
+							<td colspan="2">Cleft Lip</td>
+							<td colspan="2"><select name = "cl_lip" class = "box_size">
+								<option value="None" selected="selected">None</option>
+								<option value="Incomplete Unilateral Right">Incomplete Unilateral Right</option>
+								<option value="Incomplete Unilateral Left">Incomplete Unilateral Left</option>
+								<option value="Complete Unilateral Right">Complete Unilateral Right</option>
+								<option value="Complete Unilateral Left">Complete Unilateral Left</option>
+								<option value="Complete Bilateral">Complete Bilateral</option>
+								<option value="Incomplete Bilateral">Incomplete Bilateral</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">Cleft Palate</td>
+							<td colspan="2"><select name = "cl_palate" class = "box_size">
+								<option value="None" selected="selected">None</option>
+								<option value="Complete Unilateral Right">Complete Unilateral Right</option>
+								<option value="Complete Unilateral Left">Complete Unilateral Left</option>
+								<option value="Incomplete Unilateral Right">Incomplete Unilateral Right</option>
+								<option value="Incomplete Unilateral Left">Incomplete Unilateral Left</option>
+								<option value="Complete Bilateral">Complete Bilateral</option>
+								<option value="Incomplete Bilateral">Incomplete Bilateral</option>
+								<option value="Submucous - left">Submucous - left</option>
+								<option value="Submucous - right">Submucous - right</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<br /><br />
+					<table><!-- PROBLEMS PRESENTED -->
+						<tr>
+							<th colspan="4"><center><h2>Problems Presented</h2></center></th>
+						</tr>
+						<tr>
+							<td colspan="4" rowspan = "5">
+								<textarea class = "paragraph_size" name="prob_present" rows = "9"></textarea>
+							</td>
+						</tr>
+					</table>
+					<br /><br />
+					<table><!-- HISTORICAL BACKGROUND -->
+						<tr>
+							<th colspan="4"><center><h2>Historical Background</h2></center></th>							
+						</tr>
+						<tr>
+							<td colspan="4" rowspan = "6">
 								<textarea class = "paragraph_size" name="hist_back" rows = "9"></textarea>
 							</td>
 						</tr>
-						
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						
-						<tr>
-							<td>Religion</td>
-							<td><input type="text" name="religion"></td>	
-						</tr>
-						
-						<tr>
-							<td>Occupation</td>
-							<td><input type="text" name="occupation"></td>	
-						</tr>
-						
-						
-						<tr>
-							<td>Monthly Income</td>
-							<td><input type="number" name="monthly_income"></td>	
-							
-						</tr>
-						
-						<tr>
-							<td>Contact Number</td>
-							<td><input type="text" name="contact_number"></td>		
-						</tr>
-						
+					</table>
+					<br /><br />
+					<table><!-- ECONOMIC STATUS -->
 						<tr>
 							<th colspan="4"><center><h2>Economic Status</h2></center></th>
 						</tr>
@@ -384,11 +363,11 @@
 								<input type="radio" name="incomeEval" value="Housing">Total family income is more than enough to meet the daily needs of the family.<br>
 							</td>
 						</tr>
-						
-						
-						
+					</table>
+					<br /><br />
+					<table><!-- PLAN OF ACTION -->
 						<tr>
-							<th colspan="4"><center>6. Plan of Action</center></th>
+							<th colspan="4"><center><h2>Plan of Action</h2></center></th>
 						</tr>
 						<tr>
 							<td>Medical Consultatio Date</td>
@@ -667,11 +646,11 @@
 								<textarea class = "paragraph_size" name="oth_remarks" rows = "4"></textarea>
 							</td>				
 						</tr>
-						
-						<tr></tr>
-						
+					</table>
+					<br /><br />
+					<table><!-- WORKER'S ASSESSMENT -->
 						<tr>
-							<th colspan="4"><center>7. Worker's Assessment And Recommendations</center></th>
+							<th colspan="4"><center><h2>Worker's Assessment and Recommendation</h2></center></th>
 						</tr>
 						<tr>
 							<td colspan="4" rowspan = "8">
