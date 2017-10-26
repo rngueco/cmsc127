@@ -94,11 +94,21 @@
                     <td>
                       <form action='edit_info.php' method='post'>
                         <input type='hidden' name='pid' value='".$id."'>
-                        <input type='submit' value='Edit info' id='edit'>
-                      </form>
+                        <span title='Edit this record'>
+                          <input type='image' src='images/edit.png' width='17px' height='17px' />
+                        </span>
+                      </form>&nbsp;&nbsp;
                       <form action='summary.php' method='post'>
                         <input type='hidden' name='pid' value='".$id."'>
-                        <input type='submit' value='View full summary' id='summary'>
+                        <span title='View full summary'>
+                          <input type='image' src='images/view.png' width='17px' height='17px' />
+                        </span>
+                      </form>
+                      <form action='remove.php' action='post' style='margin-left:10%'>
+                        <input type='hidden' name='PID' value='".$id."'>
+                        <span title='Delete this record'>
+                          <input type='image' src='images/delete.png' width='17px' height='17px' />
+                        </span>
                       </form>
                     </td>
                   </tr>
