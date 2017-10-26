@@ -22,6 +22,10 @@ $result = mysqli_query($link, $query);
 		</div>
 	</div>
 	<div class="content">
+		<div class="left-panel">
+			<?php include 'navigation.php' ?>
+		</div>
+		<div class="right-panel">
 		<center>
 		<?php if($result){?>
 			<h1>Deletion Successful</h1>
@@ -30,6 +34,7 @@ $result = mysqli_query($link, $query);
 			<h1>Deletion Failed</h1>
 		<?php echo "<script>setTimeout(back, 1500);</script>"; } ?>
 		</center>
+		</div>
 	</div>
 </body>
 

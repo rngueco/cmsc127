@@ -12,12 +12,9 @@
 			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
-	<div class="content"><div class="left-panel">
-			<a href="index.php">&nbsp;&nbsp;<img src="images/home.png">&nbsp; Home</a>
-			<a href="view_recs.php">&nbsp;&nbsp;<img src="images/folder.png">&nbsp; View Records</a>
-			<a href="search.php">&nbsp;&nbsp;<img src="images/search.png">&nbsp; Search Records</a>
-			<a href="add_rec.php">&nbsp;&nbsp;<img src="images/add.png">&nbsp; New Record</a>
-			<a href="intake.php">&nbsp;&nbsp;<img src="images/file.png">&nbsp; New Intake Form</a>
+	<div class="content">
+		<div class="left-panel">
+			<?php include 'navigation.php' ?>
 		</div>
 		<div class="right-panel">
 		<center>
@@ -33,7 +30,6 @@
 				$open2 = mysqli_fetch_array($result2);
 			?>
 				<h1>Edit Surgery Information for <?=$open2['patient_fname']?> <?=$open2['patient_lname']?></h1>
-				<input type='submit' value='Save details' id='save'><input type='hidden' name='pid' value='<?=$id ?>'>
 				<table>
 				<tr>
 					<th colspan='2'>Details</th>
@@ -110,7 +106,8 @@
 					<td><b>Follow-Up Date</b></td>
 					<td><input type='date' name='follow' value='<?=$open['Follow_Up_Date']?>'></td>
 				</tr>
-			</table>
+			</table><br /><br />
+			<input type='submit' value='Save details' id='save'><input type='hidden' name='pid' value='<?=$id ?>'>
 			</form>
 		</center>
 		&nbsp;<br />&nbsp;

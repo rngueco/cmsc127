@@ -12,12 +12,9 @@
 			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
-	<div class="content"><div class="left-panel">
-			<a href="index.php">&nbsp;&nbsp;<img src="images/home.png">&nbsp; Home</a>
-			<a href="view_recs.php">&nbsp;&nbsp;<img src="images/folder.png">&nbsp; View Records</a>
-			<a href="search.php">&nbsp;&nbsp;<img src="images/search.png">&nbsp; Search Records</a>
-			<a href="add_rec.php">&nbsp;&nbsp;<img src="images/add.png">&nbsp; New Record</a>
-			<a href="intake.php">&nbsp;&nbsp;<img src="images/file.png">&nbsp; New Intake Form</a>
+	<div class="content">
+		<div class="left-panel">
+			<?php include 'navigation.php' ?>
 		</div>
 		<div class="right-panel">
 		<center>
