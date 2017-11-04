@@ -1,5 +1,4 @@
 <?php
-
 if($_POST){
 	include 'link.php';
 	$fname = $_POST["fname"];
@@ -8,13 +7,13 @@ if($_POST){
 	
 	$age = $_POST["age"];
 	$sexIdent = $_POST["gender"];
+	$cs = $_POST["cs"];
 	
 	$birth_Date = date('Y-m-d', strtotime($_POST['birthDate']));
 	$placeOfBirth = $_POST["birthplace"];
 	
 	$presentAddress = $_POST["presentAddress"];
 	$provinceAddress = $_POST["provAddress"];
-
 	$rel = $_POST["religion"];
 	$occup = $_POST["occupation"];
 	$monthly_income = $_POST["monthlyIncome"];
@@ -63,29 +62,29 @@ if($_POST){
 	$services_Provided = $_POST["servicesProvided"];
 	$income_Eval = $_POST["incomeEval"];
 	
-	$med_Date = date('Y-m-d', strtotime($_POST['medDate']));
+	$med_Date = $_POST['medDate'];
 	$med_Remarks = $_POST["medRemarks"];
-	$cp_Date = date('Y-m-d', strtotime($_POST['cpDate']));
+	$cp_Date = $_POST['cpDate'];
 	$cp_Remarks = $_POST["cpRemarks"];
-	$adm_Date = date('Y-m-d', strtotime($_POST['admDate']));
+	$adm_Date = $_POST['admDate'];
 	$adm_Remarks = $_POST["admRemarks"];
-	$surge_Date = date('Y-m-d', strtotime($_POST['surgeDate']));
+	$surge_Date = $_POST['surgeDate'];
 	$surge_Remarks = $_POST["surgeRemarks"];
-	$ds_Date = date('Y-m-d', strtotime($_POST['dsDate']));
+	$ds_Date = $_POST['dsDate'];
 	$ds_Remarks = $_POST["dsRemarks"];
-	$f_Date = date('Y-m-d', strtotime($_POST['fDate']));
+	$f_Date = $_POST['fDate'];
 	$f_Remarks = $_POST["fRemarks"];
-	$oth_Date = date('Y-m-d', strtotime($_POST['othDate']));
+	$oth_Date = $_POST['othDate'];
 	$oth_Remarks = $_POST["othRemarks"];
 	
 	$w_ARec = $_POST["wARec"];
 	
-	$query = "INSERT INTO INTAKE (fname, lname, mi, pres_add, age, gender, birthdate, birthplace, prov_add, religion, 
+	$query = "INSERT INTO INTAKE (fname, lname, mi, pres_add, age, gender, cs, birthdate, birthplace, prov_add, religion, 
 	occu, m_income, cnum, educ_bg, cl_lip, cl_palate, prob_pres, hist_bg, h_occu, e_bill, h_flrs, fuel_exp, h_rms, water_bill, 
 	h_stat, educ_exp, h_own, med_exp, toilet, food_exp, water, rent_exp, transpo, p_name, cloth_exp, p_occu, cp_load, p_rel, other_exp, p_inc, 
 	p_needs, a_name, a_ngo, a_go, a_serv, fam_inc, med_date, med_rem, cp_clear_date, cp_clear_rem, ad_date, ad_rem, sur_date, sur_rem, 
 	dc_date, dc_rem, ff_date, ff_rem, o_date, o_rem, w_a_r) 
-	VALUES('$fname', '$lname', '$minitial', '$presentAddress', '$age', '$sexIdent', '$birth_Date', 
+	VALUES('$fname', '$lname', '$minitial', '$presentAddress', '$age', '$sexIdent', '$cs', '$birth_Date', 
 	'$placeOfBirth', '$provinceAddress', '$rel', '$occup', '$monthly_income','$contact_num', '$educ_Background', 
 	'$cleft_Lip', '$cleft_Palate', '$prob_Present', '$hist_Back', '$num_Occupants', '$elec_Exp', 
 	'$num_Floors', '$fuel_Exp', '$num_Rooms', '$water_Exp', '$house_Stat', '$educ_Exp', '$house_Own', '$med_Exp', '$toilet_Type',

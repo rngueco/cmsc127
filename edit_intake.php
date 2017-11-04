@@ -12,8 +12,7 @@
 			<h1>uke Foundation, Inc</h1></span>
 		</div>
 	</div>
-	<div class="content">
-		<div class="left-panel">
+	<div class="content"><div class="left-panel">
 			<?php include 'navigation.php' ?>
 		</div>
 		<div class="right-panel">
@@ -43,11 +42,12 @@
 							
 							<td>Educational Background</td>
 							<td><select name = "educBack" class = "box_size">
-								<option value="None" <?php if($open['EDUC_BG']=='None') echo"selected='selected'"; ?>>None</option>
-								<option value="Primary" <?php if($open['EDUC_BG']=='Primary') echo"selected='selected'"; ?>>Primary</option>
-								<option value="Secondary" <?php if($open['EDUC_BG']=='Secondary') echo"selected='selected'"; ?>>Secondary</option>
-								<option value="Tertiary" <?php if($open['EDUC_BG']=='Tertiary') echo"selected='selected'"; ?>>Tertiary</option>
-								<option value="Others" <?php if($open['EDUC_BG']=='Others') echo"selected='selected'"; ?>>Others</option>
+								<option value="None" <?php if($open['EDUC_BG']=='No Schooling Attended') echo"selected='selected'"; ?>>No Schooling Attended</option>
+								<option value="Primary" <?php if($open['EDUC_BG']=='Elementary') echo"selected='selected'"; ?>>Elementary</option>
+								<option value="Secondary" <?php if($open['EDUC_BG']=='High School') echo"selected='selected'"; ?>>High School</option>
+								<option value="Tertiary" <?php if($open['EDUC_BG']=='College Undergraduate') echo"selected='selected'"; ?>>College Undergraduate</option>
+								<option value="Others" <?php if($open['EDUC_BG']=='Others') echo"selected='selected'"; ?>>College Graduate</option>
+								<option value="Others" <?php if($open['EDUC_BG']=='Others') echo"selected='selected'"; ?>>Vocational</option>
 								</select>
 							</td>
 						</tr>
@@ -99,8 +99,8 @@
 						<tr>
 							<td>Gender</td>
 							<td>
-								<input type="radio" name="gender" value="M" <?php if($open['GENDER']=='M') echo"checked"; ?>> Male<br>
-								<input type="radio" name="gender" value="F" <?php if($open['GENDER']=='F') echo"checked"; ?>> Female<br>
+								<input type="radio" name="gender" value="M" <?php if($open['GENDER']=='m') echo"checked"; ?>> Male<br>
+								<input type="radio" name="gender" value="F" <?php if($open['GENDER']=='f') echo"checked"; ?>> Female<br>
 							</td>
 							
 							<th colspan="2">Problems Presented</th>
@@ -108,7 +108,7 @@
 						
 						<tr>
 							<td>CS</td>
-							<td><input type="text" name="cs" value='<?= $open['CS'] ?>'> </td>	
+							<td><input type="text" name="cs" value='<?=$open['CS']?>'> </td>	
 							
 							
 							<td colspan="2" rowspan = "5">
@@ -119,14 +119,14 @@
 						<tr>
 							<td>Birthdate</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['Evaluation_Date'] ?>'>
+								<input type='date' name='eval' value='<?= $open['BIRTHDATE'] ?>'>
 							</td>	
 						</tr>
 						
 						<tr>
 							<td>Birthplace</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="birthplace" rows = "4" value='<?= $open['BIRTHPLACE'] ?>'> </textarea>
+								<textarea class = "paragraph_size" name="birthplace" rows = "4" ><?= $open['BIRTHPLACE'] ?></textarea>
 							</td>						
 						</tr>
 						
@@ -137,7 +137,7 @@
 						<tr>
 							<td>Provincial Address</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="prov_address" rows = "4"> <?= $open['PROV_ADD'] ?> </textarea>
+								<textarea class = "paragraph_size" name="prov_address" rows = "4"><?= $open['PROV_ADD'] ?></textarea>
 							</td>		
 							
 							<th colspan="2">Historical Background</th>							
@@ -150,7 +150,7 @@
 						<tr>
 							<td>Present Address</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="present_address" rows = "4"> <?= $open['PROV_ADD'] ?> </textarea>
+								<textarea class = "paragraph_size" name="present_address" rows = "4"><?= $open['PRES_ADD'] ?></textarea>
 							</td>	
 							
 							<td colspan="2" rowspan = "6">
@@ -358,7 +358,7 @@
 
 						<tr>
 							<td colspan = "4">
-								<input type="radio" name="incomeEval" value="Food" <?php if($open['FAM_INC']=='Food') echo"checked"; ?> >Total family ncome is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.<br>
+								<input type="radio" name="incomeEval" value="Food" <?php if($open['FAM_INC']=='Food') echo"checked"; ?> >Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.<br>
 								<input type="radio" name="incomeEval" value="Education" <?php if($open['FAM_INC']=='Education') echo"checked"; ?> >Total income is just enough to meet the daily basic needs of the family.<br>
 								<input type="radio" name="incomeEval" value="Housing" <?php if($open['FAM_INC']=='Housing') echo"checked"; ?> >Total family income is more than enough to meet the daily needs of the family.<br>
 							</td>

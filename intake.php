@@ -18,15 +18,8 @@
 	<div class="content">
 		
 		<div class="left-panel">
-			<a href="index.php">&nbsp;&nbsp;<img src="images/home.png">&nbsp; Home</a>
-			<a href="view_recs.php">&nbsp;&nbsp;<img src="images/folder.png">&nbsp; View Records</a>
-			<a href="search.php">&nbsp;&nbsp;<img src="images/search.png">&nbsp; Search Records</a>
-			<a href="add_rec.php">&nbsp;&nbsp;<img src="images/add.png">&nbsp; New Record</a>
-			<a href="intake.php">&nbsp;&nbsp;<img src="images/file.png">&nbsp; New Intake Form</a>
+			<?php include 'navigation.php' ?>
 		</div>
-	
-	
-	
 	
 		<div class="right-panel">
 			<center id="toRep">
@@ -93,7 +86,8 @@
 								<option value="Incomplete Unilateral Left">Incomplete Unilateral Left</option>
 								<option value="Complete Bilateral">Complete Bilateral</option>
 								<option value="Incomplete Bilateral">Incomplete Bilateral</option>
-								<option value="Incomplete Bilateral">Submuccous</option>
+								<option value="Submucous - left">Submucous - left</option>
+								<option value="Submucous - right">Submucous - right</option>
 								</select>
 							</td>
 						</tr>
