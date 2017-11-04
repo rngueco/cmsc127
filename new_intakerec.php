@@ -80,7 +80,7 @@ if($_POST){
 	
 	$w_ARec = $_POST["wARec"];
 	
-	$query = "INSERT INTO INTAKE (fname, lname, mi, pes_add, age, gender, birthdate, birthplace, prov_add, religion, 
+	$query = "INSERT INTO INTAKE (fname, lname, mi, pres_add, age, gender, birthdate, birthplace, prov_add, religion, 
 	occu, m_income, cnum, educ_bg, cl_lip, cl_palate, prob_pres, hist_bg, h_occu, e_bill, h_flrs, fuel_exp, h_rms, water_bill, 
 	h_stat, educ_exp, h_own, med_exp, toilet, food_exp, water, rent_exp, transpo, p_name, cloth_exp, p_occu, cp_load, p_rel, other_exp, p_inc, 
 	p_needs, a_name, a_ngo, a_go, a_serv, fam_inc, med_date, med_rem, cp_clear_date, cp_clear_rem, ad_date, ad_rem, sur_date, sur_rem, 
