@@ -5,6 +5,7 @@ function new_intake(){
 	var minit = document.getElementsByName('minitial')[0].value;
 	
 	var age = document.getElementsByName('age')[0].value;
+	var cs = document.getElementsByName('cs')[0].value;
 
 	var birthplace = document.getElementsByName('birthplace')[0].value;
 	var dateOfBirth = document.getElementsByName('birthDate')[0].value;
@@ -15,7 +16,7 @@ function new_intake(){
 	for (var i = 0, length = radios.length; i < length; i++) {
 		if (radios[i].checked) {
 			sex = radios[i].value;
-		break;
+			break;
 		}
 	}
 	
@@ -104,7 +105,7 @@ function new_intake(){
 	
 	xhttp.open("POST","new_intakerec.php", true);
 	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xhttp.send("fname=" + fname + "&lname=" + lname + "&minitial=" + minit + "&age=" + age + "&presentAddress=" + presentAddress + 
+	xhttp.send("fname=" + fname + "&lname=" + lname + "&minitial=" + minit + "&age=" + age + "&cs=" + cs + "&presentAddress=" + presentAddress + 
 				"&gender=" + sex + "&birthDate=" + dateOfBirth + "&birthplace=" + birthplace + "&provAddress=" + provAddress +
 				"&religion=" + religion + "&occupation=" + occupation + "&monthlyIncome=" + monthlyIncome + "&contactNumber=" + contactNumber +
 				"&educBackground=" + educBackground + "&cLip=" + cLip + "&cPalate=" + cPalate + "&probPresent=" + probPresent +
