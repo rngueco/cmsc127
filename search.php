@@ -45,6 +45,7 @@
   							<option value="Incomplete unilateral cleft lip - right">Incomplete unilateral cleft lip - right</option>
   							<option value="Incomplete unilateral cleft lip - left">Incomplete unilateral cleft lip - left</option>
 							<option value="Complete bilateral cleft lip">Complete bilateral cleft lip</option>
+							<option value="None" selected="selected">None</option>
 						</select>
 					</td>
 				</tr>
@@ -60,6 +61,7 @@
 							<option value="Incomplete bilateral cleft palate">Incomplete bilateral cleft palate</option>
 							<option value="Submucous cleft - right">Submucous cleft - right</option>
 							<option value="Submucous cleft - left">Submucous cleft - left</option>
+							<option value="None" selected="selected">None</option>
 						</select>
 					</td>	
 				</tr>
@@ -73,292 +75,32 @@
 				</tr>
 				<tr>
 					<td>By evaluation date</td>
-					<td>From: <select name = "evalmonth1">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "evalday1">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "evalyear1">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
-						<td>To: <select name = "evalmonth2">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "evalday2">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "evalyear2">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
+					<td>From: <input type='date' name='eval1' ></td>
+						<td>To: <input type='date' name='eval2' ></td>
 
 				</tr>
 				<tr>
 					<td>By admission date</td>
-					<td>From: <select name = "admonth1">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "adday1">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "adyear1">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
-						<td>To: <select name = "admonth2">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "adday2">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "adyear2">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
+					<td>From: <input type='date' name='admi1' ></td>
+						<td>To: <input type='date' name='admi2' ></td>
 
 				</tr>
 				<tr>
 					<td>By surgery date</td>
-					<td>From: <select name = "surmonth1">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "surday1">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "suryear1">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
-						<td>To: <select name = "surmonth2">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "surday2">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "suryear2">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
+					<td>From: <input type='date' name='sur1' ></td>
+						<td>To: <input type='date' name='sur2' ></td>
 
 				</tr>
 				<tr>
 					<td>By discharge date</td>
-					<td>From: <select name = "dismonth1">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "disday1">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "disyear1">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
-						<td>To: <select name = "dismonth2">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "disday2">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "disyear2">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
+					<td>From: <input type='date' name='dis1' ></td>
+						<td>To: <input type='date' name='dis2' ></td>
 
 				</tr>
 				<tr>
 					<td>By follow-up date</td>
-					<td>From: <select name = "fupmonth1">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "fupday1">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "fupyear1">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
-						<td>To: <select name = "fupmonth2">
-								<option value="01">January</option>
-								<option value="02">February</option>
-								<option value="03">March</option>
-								<option value="04">April</option>
-								<option value="05">May</option>
-								<option value="06">June</option>
-								<option value="07">July</option>
-								<option value="08">August</option>
-								<option value="09">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
-								<option value="00" selected="selected">--------</option>
-						</select>
-						<select name = "fupday2">
-			   	 				<?php for ($i = 1; $i <= 31; $i++) : ?>
-			        			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-			    				<?php endfor; ?>
-							<option value="00" selected="selected">--</option>
-						</select>
-						<select name = "fupyear2">
-   	 						<?php for ($i = 1950; $i <= date("Y")+1; $i++) : ?>
-        						<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
-    							<?php endfor; ?>
-							<option value="00" selected="selected">----</option>
-						</select></td>
+					<td>From: <input type='date' name='fup1' ></td>
+						<td>To: <input type='date' name='fup2' ></td>
 
 				</tr>
 				<tr>
