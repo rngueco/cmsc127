@@ -67,7 +67,9 @@ function new_intake(){
 	var inputElements = document.getElementsByName('needsProvided');
 	for(var i=0; inputElements[i]; ++i){
 		if(inputElements[i].checked){
-			needsProvided += (inputElements[i].value) + ",";
+			if(needsProvided!="")
+				needsProvided += " ";
+			needsProvided += (inputElements[i].value);
 		}
 	}
 	
