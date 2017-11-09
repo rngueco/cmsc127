@@ -9,7 +9,7 @@ if($_POST){
 	$sexIdent = $_POST["gender"];
 	$cs = $_POST["cs"];
 	
-	$birth_Date = date('Y-m-d', strtotime($_POST['birthDate']));
+	$birth_Date = $_POST['birthDate'];
 	$placeOfBirth = $_POST["birthplace"];
 	
 	$presentAddress = $_POST["presentAddress"];
