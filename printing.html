@@ -1,0 +1,20 @@
+<div id="print-content">
+<p>there was a tree. </p>
+</div>
+ <form>
+	
+  <input type="button" onclick="printDiv('print-content')" value="print a div!"/>
+</form>
+
+
+<script type="text/javascript">
+
+function printDiv(divName) {
+
+ var printContents = document.getElementById(divName).innerHTML;
+ w=window.open();
+ w.document.write(printContents);
+ w.print();
+ w.close();
+}
+</script>
