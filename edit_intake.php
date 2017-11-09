@@ -28,8 +28,6 @@
 			?>
 				<h1>Edit Surgery Information for <?=$open['FNAME']?> <?=$open['LNAME']?></h1>
 				
-				<input type='submit' value='Save details' id='save'><input type='hidden' name='pid' value='<?= $id?>'>
-				
 				<table>
 						<tr>
 							<th colspan='2'>Identifying Information</th>
@@ -42,12 +40,12 @@
 							
 							<td>Educational Background</td>
 							<td><select name = "educBack" class = "box_size">
-								<option value="None" <?php if($open['EDUC_BG']=='No Schooling Attended') echo"selected='selected'"; ?>>No Schooling Attended</option>
-								<option value="Primary" <?php if($open['EDUC_BG']=='Elementary') echo"selected='selected'"; ?>>Elementary</option>
-								<option value="Secondary" <?php if($open['EDUC_BG']=='High School') echo"selected='selected'"; ?>>High School</option>
-								<option value="Tertiary" <?php if($open['EDUC_BG']=='College Undergraduate') echo"selected='selected'"; ?>>College Undergraduate</option>
-								<option value="Others" <?php if($open['EDUC_BG']=='Others') echo"selected='selected'"; ?>>College Graduate</option>
-								<option value="Others" <?php if($open['EDUC_BG']=='Others') echo"selected='selected'"; ?>>Vocational</option>
+								<option value="No Schooling Attended" <?php if($open['EDUC_BG']=='No Schooling Attended') echo"selected='selected'"; ?>>No Schooling Attended</option>
+								<option value="Elementary" <?php if($open['EDUC_BG']=='Elementary') echo"selected='selected'"; ?>>Elementary</option>
+								<option value="High School" <?php if($open['EDUC_BG']=='High School') echo"selected='selected'"; ?>>High School</option>
+								<option value="College Undergraduate" <?php if($open['EDUC_BG']=='College Undergraduate') echo"selected='selected'"; ?>>College Undergraduate</option>
+								<option value="College Graduate" <?php if($open['EDUC_BG']=='College Graduate') echo"selected='selected'"; ?>>College Graduate</option>
+								<option value="Vocational" <?php if($open['EDUC_BG']=='Vocational') echo"selected='selected'"; ?>>Vocational</option>
 								</select>
 							</td>
 						</tr>
@@ -56,12 +54,12 @@
 							<td>Last Name</td>
 							<td><input type="text" name="lname" value='<?=$open['LNAME']?>'> </td>
 							
-							<th colspan="2">Type of Cleft</th>				
+							<th colspan="2">Type of Cleft</th>
 						</tr>
 						
 						<tr>
 							<td> Middle Initial </td>
-							<td><input type="text" name="minitial" value='<?=$open['MI']?>'>  </td>
+							<td><input type="text" name="minitial" value='<?=$open['MI']?>' maxlength="1">  </td>
 							
 							<td>Cleft Lip</td>
 							<td><select name = "cl_lip" class = "box_size">
@@ -99,8 +97,8 @@
 						<tr>
 							<td>Gender</td>
 							<td>
-								<input type="radio" name="gender" value="M" <?php if($open['GENDER']=='m') echo"checked"; ?>> Male<br>
-								<input type="radio" name="gender" value="F" <?php if($open['GENDER']=='f') echo"checked"; ?>> Female<br>
+								<input type="radio" name="gender" value="M" <?php if($open['GENDER']=='M') echo"checked"; ?>> Male<br>
+								<input type="radio" name="gender" value="F" <?php if($open['GENDER']=='F') echo"checked"; ?>> Female<br>
 							</td>
 							
 							<th colspan="2">Problems Presented</th>
@@ -112,14 +110,14 @@
 							
 							
 							<td colspan="2" rowspan = "5">
-								<textarea class = "paragraph_size" name="prob_present" rows = "9"> <?= $open['PROB_PRES'] ?> </textarea>
+								<textarea class = "paragraph_size" name="prob_present" rows = "9"><?= $open['PROB_PRES'] ?></textarea>
 							</td>
 						</tr>
 						
 						<tr>
 							<td>Birthdate</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['BIRTHDATE'] ?>'>
+								<input type='date' name='bday' value='<?= $open['BIRTHDATE'] ?>'>
 							</td>	
 						</tr>
 						
@@ -154,7 +152,7 @@
 							</td>	
 							
 							<td colspan="2" rowspan = "6">
-								<textarea class = "paragraph_size" name="hist_back" rows = "9"> <?= $open['HIST_BG'] ?> </textarea>
+								<textarea class = "paragraph_size" name="hist_back" rows = "9"><?= $open['HIST_BG'] ?></textarea>
 							</td>
 						</tr>
 						
@@ -181,7 +179,7 @@
 						
 						<tr>
 							<td>Contact Number</td>
-							<td><input type="text" name="contact_number" value='<?= $open['CNUM'] ?>'> </td>		
+							<td>+639 <input type="text" name="contactNumber" maxlength="9" size="15" pattern="[01-9]{9,}" value='<?= $open['CNUM'] ?>' ></td>
 						</tr>
 						
 						<tr>
@@ -314,21 +312,29 @@
 						</tr>
 						
 						<tr><!-- May Somethng pa dito -->
+							<?php
+							$pNeeds=$open['P_NEEDS'];
+							$food = strpos($pNeeds, "Food");
+							$educ = strpos($pNeeds, "Education");
+							$hous = strpos($pNeeds, "Housing");
+							$med = strpos($pNeeds, "Medical Needs");
+							$clo = strpos($pNeeds, "Clothing");
+							$oth = strpos($pNeeds, "Others");
+							?>
 							<td rowspan = "6">Need Provided to Patient</td>
 							<td rowspan = "6">
-								<input type="checkbox" name="needsProvided" value="Food">Food<br>
-								<input type="checkbox" name="needsProvided" value="Education">Education<br>
-								<input type="checkbox" name="needsProvided" value="Housing">Housing<br>
-								<input type="checkbox" name="needsProvided" value="Medical Needs">Medical Needs<br>
-								<input type="checkbox" name="needsProvided" value="Clothing">Clothing<br>
-								<input type="checkbox" name="needsProvided" value="Others">Others<br>
+								<input type="checkbox" name="needsProvided[]" value="Food" <?php if($food!==false) echo "checked"; ?>>Food<br>
+								<input type="checkbox" name="needsProvided[]" value="Education" <?php if($educ!==false) echo "checked"; ?>>Education<br>
+								<input type="checkbox" name="needsProvided[]" value="Housing" <?php if($hous!==false) echo "checked"; ?>>Housing<br>
+								<input type="checkbox" name="needsProvided[]" value="Medical Needs" <?php if($med!==false) echo "checked"; ?>>Medical Needs<br>
+								<input type="checkbox" name="needsProvided[]" value="Clothing" <?php if($clo!==false) echo "checked"; ?>>Clothing<br>
+								<input type="checkbox" name="needsProvided[]" value="Others" <?php if($oth!==false) echo "checked"; ?>>Others<br>
 							</td>
 							
 							<td>Name of Agency</td>
 							<td><input type="text" name="agency_name" value='<?= $open['A_NAME'] ?>' ></td>	
 						</tr>
 						
-					
 						<tr>
 							<td>NGO</td>
 							<td><input type="text" name="ngo" value='<?= $open['A_NGO'] ?>' > </td>
@@ -343,7 +349,7 @@
 						<tr>
 							<td rowspan = "4">Services Provided</td>
 							<td colspan="1" rowspan = "3">
-								<textarea class = "paragraph_size" name="services_provided" rows = "4"> <?= $open['A_SERV'] ?> </textarea>
+								<textarea class = "paragraph_size" name="services_provided" rows = "4"><?= $open['A_SERV'] ?></textarea>
 							</td>	
 						</tr>	
 						
@@ -358,6 +364,7 @@
 
 						<tr>
 							<td colspan = "4">
+								<input type="radio" name="incomeEval" value="None" <?php if($open['FAM_INC']=='None') echo"checked"; ?> >Yet to evaluate.<br>
 								<input type="radio" name="incomeEval" value="Food" <?php if($open['FAM_INC']=='Food') echo"checked"; ?> >Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.<br>
 								<input type="radio" name="incomeEval" value="Education" <?php if($open['FAM_INC']=='Education') echo"checked"; ?> >Total income is just enough to meet the daily basic needs of the family.<br>
 								<input type="radio" name="incomeEval" value="Housing" <?php if($open['FAM_INC']=='Housing') echo"checked"; ?> >Total family income is more than enough to meet the daily needs of the family.<br>
@@ -372,12 +379,12 @@
 						<tr>
 							<td>Medical Consultation Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['MED_DATE'] ?>'>
+								<input type='date' name='med_consul' value='<?= $open['MED_DATE'] ?>'>
 							</td>	
 							
 							<td>Medical Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="med_remarks" rows = "4"> <?= $open['MED_REM'] ?> </textarea>
+								<textarea class = "paragraph_size" name="med_remarks" rows = "4"><?= $open['MED_REM'] ?></textarea>
 							</td>				
 						</tr>
 						
@@ -386,12 +393,12 @@
 						<tr>
 							<td>CP Clearance Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['CP_CLEAR_DATE'] ?>'>
+								<input type='date' name='cp_clear' value='<?= $open['CP_CLEAR_DATE'] ?>'>
 							</td>	
 							
 							<td>CP Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="cp_remarks" rows = "4"> <?= $open['CP_CLEAR_REM'] ?> </textarea>
+								<textarea class = "paragraph_size" name="cp_remarks" rows = "4"><?= $open['CP_CLEAR_REM'] ?></textarea>
 							</td>				
 						</tr>
 						
@@ -400,13 +407,13 @@
 						<tr>
 							<td>Admission Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['AD_DATE'] ?>'>
+								<input type='date' name='adm_date' value='<?= $open['AD_DATE'] ?>'>
 							</td>	
 							
 							<td>Admission Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="adm_remarks" rows = "4"> <?= $open['AD_REM'] ?> </textarea>
-							</td>				
+								<textarea class = "paragraph_size" name="adm_remarks" rows = "4"><?= $open['AD_REM'] ?></textarea>
+							</td>
 						</tr>
 						
 						<tr></tr>
@@ -414,13 +421,13 @@
 						<tr>
 							<td>Surgery Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['SUR_DATE'] ?>'>
+								<input type='date' name='surge_date' value='<?= $open['SUR_DATE'] ?>'>
 							</td>	
 							
 							<td>Surgery Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="surge_remarks" rows = "4"> <?= $open['SUR_REM'] ?> </textarea>
-							</td>				
+								<textarea class = "paragraph_size" name="surge_remarks" rows = "4"><?= $open['SUR_REM'] ?></textarea>
+							</td>
 						</tr>
 						
 						<tr></tr>
@@ -428,12 +435,12 @@
 						<tr>
 							<td>Discharge Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['DC_DATE'] ?>'>
-							</td>	
+								<input type='date' name='ds_date' value='<?= $open['DC_DATE'] ?>'>
+							</td>
 							
 							<td>Discharge Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="ds_remarks" rows = "4"> <?= $open['DC_REM'] ?> </textarea>
+								<textarea class = "paragraph_size" name="ds_remarks" rows = "4"><?= $open['DC_REM'] ?></textarea>
 							</td>				
 						</tr>
 						
@@ -442,12 +449,12 @@
 						<tr>
 							<td>Follow-up Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['FF_DATE'] ?>'>
+								<input type='date' name='f_date' value='<?= $open['FF_DATE'] ?>'>
 							</td>	
 							
 							<td>Follow-up Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="f_remarks" rows = "4"> <?= $open['FF_REM'] ?> </textarea>
+								<textarea class = "paragraph_size" name="f_remarks" rows = "4"><?= $open['FF_REM'] ?></textarea>
 							</td>				
 						</tr>
 						
@@ -456,12 +463,12 @@
 						<tr>
 							<td>Others Date</td>
 							<td>
-								<input type='date' name='eval' value='<?= $open['O_DATE'] ?>'>
+								<input type='date' name='oth_date' value='<?= $open['O_DATE'] ?>'>
 							</td>	
 							
 							<td>Others Remarks</td>
 							<td colspan="1" rowspan = "2">
-								<textarea class = "paragraph_size" name="oth_remarks" rows = "4"> <?= $open['O_REM'] ?> </textarea>
+								<textarea class = "paragraph_size" name="oth_remarks" rows = "4"><?= $open['O_REM'] ?></textarea>
 							</td>				
 						</tr>
 						
@@ -479,7 +486,7 @@
 						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
 						
 						<tr>
-							<td colspan="4" align="center"><input type="submit" value="Submit"></td>
+							<td colspan="4" align="center"><input type="submit" value="Submit"><input type='hidden' name='iid' value='<?=$id?>'></td>
 						</tr>
 					</table>
 			</form>
