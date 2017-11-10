@@ -40,7 +40,7 @@
         $numrows = $r[0];
 
         // number of rows to show per page
-        $rowsperpage = 20;
+        $rowsperpage = 30;
         // find out total pages
         $totalpages = ceil($numrows / $rowsperpage);
 
