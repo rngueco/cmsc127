@@ -4,5 +4,6 @@ echo
 	<a href="view_recs.php">&nbsp;&nbsp;<img src="images/folder.png">&nbsp; View Records</a>
 	<a href="search.php">&nbsp;&nbsp;<img src="images/search.png">&nbsp; Search Records</a>
 	<a href="add_rec.php">&nbsp;&nbsp;<img src="images/add.png">&nbsp; New Record</a>
+	<a href="pending.php">&nbsp;&nbsp;<img src="">&nbsp; View Intakes</a>
 	<a href="intake.php">&nbsp;&nbsp;<img src="images/file.png">&nbsp; New Intake Form</a>'
 ?>
