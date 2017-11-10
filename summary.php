@@ -1,25 +1,10 @@
 <html>
-<script type="text/javascript">
 
-function printDiv(divName) {
-
- var printContents = document.getElementById("print-content");
- var WinPrint = window.open('','','left = 0,top = 0, width = 1000, height = 1100, toolbar = 0, scrollbars = 0, status = 0');
- WinPrint.document.write('<html><head><link rel="stylesheet" type="text/css" href="css/style.css"></head><body onload = "print(); close();">');
- WinPrint.document.write(printContents.innerHTML);
- WinPrint.document.write('</body></html>');
- WinPrint.document.close();
- WinPrint.focus();
- //w=window.open();
- //w.document.write(printContents);
- //w.print();
- //w.close();
-}
-</script>
 <head>
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="script/backToIndex.js" type="text/javascript" ></script>
+	<script src="script/printDiv.js" type="text/javascript" ></script>
 	<link href="images/favi.png" type="image/png" rel="icon" />
 </head>
 <body>
@@ -139,11 +124,13 @@ function printDiv(divName) {
 			</center>
 			<br/>
 		<center>	
-			<form action='remove.php' action='post' style='margin-left:10%'>
+			<form action='remove.php' action='post' style='margin-left:10%' >
 				<input type='hidden' name='PID' value='".$open['patient_id']."'><br />
-				<input type='submit' value='Delete Record'>
-				<input type='button' onclick=\"printDiv('print-content')\" value='Print'/>
+				<input type='image' src = 'images/delete.png' width = '17px' height = '17px' onclick=\"return confirm('Are you sure you want to delete this record?');\">
 			</form>
+			<span title = 'Print Record'>
+				<input type='image' src = 'images/printer.png' onclick=\"printDiv('print-content')\" width = \"17px\" height = \"17px\"/>
+			</span>
 		</center>"
 		?>
 		&nbsp;<br />&nbsp;
