@@ -76,11 +76,15 @@
                     <td>
                       <form action='edit_intake.php' method='post'>
                         <input type='hidden' name='iid' value='".$id."'>
-                        <input type='submit' value='Edit info' id='edit'>
-                      </form>
+                        <span title='Edit this record'>
+                          <input type='image' src='images/edit.png' width='17px' height='17px' />
+                        </span>
+                      </form>&nbsp;&nbsp;
                       <form action='intake_sum.php' method='post'>
                         <input type='hidden' name='iid' value='".$id."'>
-                        <input type='submit' value='View full summary' id='summary'>
+                        <span title='View full summary'>
+                          <input type='image' src='images/view.png' width='17px' height='17px' />
+                        </span>
                       </form>
                     </td>
                   </tr>
