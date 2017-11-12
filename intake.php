@@ -34,7 +34,7 @@
 						
 						<tr>
 							<td>First Name</td>
-							<td><input type="text" name="fname"> </td>
+							<td><input type="text" name="fname" required> </td>
 							
 							<td>Educational Background</td>
 							<td><select name = "educBackground" class = "box_size">
@@ -50,7 +50,7 @@
 						
 						<tr>
 							<td>Last Name</td>
-							<td><input type="text" name="lname"></td>	
+							<td><input type="text" name="lname" required></td>	
 							
 							<th colspan="2">Type of Cleft</th>				
 						</tr>
@@ -75,7 +75,7 @@
 						
 						<tr>
 							<td>Age</td>
-							<td><input type="number" name="age" min ="1"></td>	
+							<td><input type="number" name="age" min ="1" required></td>	
 							
 							<td>Cleft Palate</td>
 							<td><select name = "cPalate" class = "box_size">
