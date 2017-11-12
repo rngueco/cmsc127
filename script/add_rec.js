@@ -38,5 +38,5 @@ function add_rec(){
 	xhttp.send("fname="+fname+"&lname="+lname+"&minitial="+minit+"&clip="+cllip+"&cpalate="+clpal+"&operation="+toper+"&repair="+trepa+"&surgeon="+surge+"&evalyear="+eyear+"&evalmonth="+emont+"&evalday="+edate+"&adyear="+ayear+"&admonth="+amont+"&adday="+adate+"&suryear="+syear+"&surmonth="+smont+"&surday="+sdate+"&disyear="+dyear+"&dismonth="+dmont+"&disday="+ddate+"&fupyear="+fyear+"&fupmonth="+fmont+"&fupday="+fdate+"&hbills="+bills+"&lfees="+lfees);
 	var cont = document.getElementById("toRep");
 	cont.innerHTML = "<h1>Successful</h1>";
-	setTimeout(back, 3000);
+	setTimeout(backToHome, 1000);
 }
