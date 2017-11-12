@@ -172,7 +172,7 @@
 						
 						<tr>
 							<td>Monthly Income</td>
-							<td><input type="number" name="monthlyIncome" step = ".01"></td>	
+							<td><input type="number" name="monthlyIncome" step = ".01" min ="0"></td>	
 							
 						</tr>
 						
