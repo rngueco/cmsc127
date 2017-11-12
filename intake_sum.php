@@ -3,6 +3,7 @@
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="script/backToIndex.js" type="text/javascript" ></script>
+	<script src="script/printDiv.js" type="text/javascript" ></script>
 	<link href="images/favi.png" type="image/png" rel="icon" />
 </head>
 <body>
@@ -16,6 +17,7 @@
 			<?php include 'navigation.php' ?>
 		</div>
 		<div class="right-panel">
+		<div id ="print-content">
 		<center>
 			<?php 
 				include 'link.php';
@@ -454,9 +456,22 @@
 						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
 						
 					</table>
+					</div>
+					</center>
+					<center>
+					<form action='remove.php' action='post' style='margin-left:10%' >
+						<input type='hidden' name='PID' value='".$open['patient_id']."'><br />
+						<input type='image' src = 'images/delete.png' width = '17px' height = '17px' onclick="return confirm('Are you sure you want to delete this record?');">
+					</form>
+					<span title = 'Print Record'>
+						<input type='image' src = 'images/printer.png' onclick="printDiv('print-content')" width = "17px" height = "17px"/>
+					</span>
 		</center>
 		&nbsp;<br />&nbsp;
 		</div>
 	</div>
+
+
+			
 </body>
 </html>
