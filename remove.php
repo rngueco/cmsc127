@@ -29,10 +29,10 @@ $result = mysqli_query($link, $query);
 		<center>
 		<?php if($result){?>
 			<h1>Deletion Successful</h1>
-		<?php echo "<script>setTimeout(back, 1500);</script>";
+		<?php echo "<script>setTimeout(backToHome, 1500);</script>";
 			}else{ ?>
 			<h1>Deletion Failed</h1>
-		<?php echo "<script>setTimeout(back, 1500);</script>"; } ?>
+		<?php echo "<script>setTimeout(backToHome, 1500);</script>"; } ?>
 		</center>
 		</div>
 	</div>
