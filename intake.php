@@ -192,10 +192,10 @@
 						
 						<tr>
 							<td>Number of Occupants</td>
-							<td><input type="number" name="numOccupants"></td>	
+							<td><input type="number" name="numOccupants" min ="1"></td>	
 							
 							<td>Electric Bill</td>
-							<td><input type="number" name="elecExp" step = ".01"></td>	
+							<td><input type="number" name="elecExp" step = ".01" min = "0"></td>	
 						</tr>
 						
 						<tr>
