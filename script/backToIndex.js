@@ -1,3 +1,3 @@
 function back(){
-	window.location = "index.php";
+	window.location = "backToMain.php";
 }
