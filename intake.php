@@ -75,7 +75,7 @@
 						
 						<tr>
 							<td>Age</td>
-							<td><input type="number" name="age"></td>	
+							<td><input type="number" name="age" min ="1"></td>	
 							
 							<td>Cleft Palate</td>
 							<td><select name = "cPalate" class = "box_size">
