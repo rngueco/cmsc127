@@ -57,7 +57,7 @@
 						
 						<tr>
 							<td> Middle Initial </td>
-							<td><input type="text" name="minitial"></td>
+							<td><input type="text" name="minitial" maxlength="1"></td>
 							
 							<td>Cleft Lip</td>
 							<td><select name = "cLip" class = "box_size">
@@ -75,7 +75,7 @@
 						
 						<tr>
 							<td>Age</td>
-							<td><input type="number" name="age" min ="1" required></td>	
+							<td><input type="number" name="age"></td>	
 							
 							<td>Cleft Palate</td>
 							<td><select name = "cPalate" class = "box_size">
@@ -172,13 +172,13 @@
 						
 						<tr>
 							<td>Monthly Income</td>
-							<td><input type="number" name="monthlyIncome" step = ".01" min ="0"></td>	
+							<td><input type="number" name="monthlyIncome" step = ".01"></td>	
 							
 						</tr>
 						
 						<tr>
 							<td>Contact Number</td>
-							<td><input type="text" name="contactNumber"></td>		
+							<td>+639 <input type="text" name="contactNumber" maxlength="9" size="15" pattern="[01-9]{9,}" ></td>
 						</tr>
 						
 						<tr>
@@ -192,26 +192,26 @@
 						
 						<tr>
 							<td>Number of Occupants</td>
-							<td><input type="number" name="numOccupants" min ="1"></td>	
+							<td><input type="number" name="numOccupants"></td>	
 							
 							<td>Electric Bill</td>
-							<td><input type="number" name="elecExp" step = ".01" min = "0"></td>	
+							<td><input type="number" name="elecExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
 							<td>Number of Floors</td>
-							<td><input type="number" name="numFloors" min="1"></td>	
+							<td><input type="number" name="numFloors"></td>	
 							
 							<td>Fuel Expense</td>
-							<td><input type="number" name="fuelExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="fuelExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
 							<td>Number of Rooms</td>
-							<td><input type="number" name="numRooms" min ="1"></td>	
+							<td><input type="number" name="numRooms"></td>	
 							
 							<td>Water Bill</td>
-							<td><input type="number" name="waterExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="waterExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
@@ -225,7 +225,7 @@
 							</td>
 							
 							<td>Educational Expense</td>
-							<td><input type="number" name="educExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="educExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
@@ -240,7 +240,7 @@
 							</td>
 							
 							<td>Medical Expense</td>
-							<td><input type="number" name="medExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="medExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
@@ -254,7 +254,7 @@
 							</td>
 							
 							<td>Food Expense</td>
-							<td><input type="number" name="foodExp" step = ".01" min = "0"></td>	
+							<td><input type="number" name="foodExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
@@ -269,14 +269,14 @@
 							</td>
 							
 							<td>Rent Expense</td>
-							<td><input type="number" name="rentExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="rentExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
 							<th colspan="2"><h4>3. Provider of Client's Needs</h4></th>
 							
 							<td>Transportation Expense</td>
-							<td><input type="number" name="transExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="transExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
@@ -284,7 +284,7 @@
 							<td><input type="text" name="pFullName"> </td>
 							
 							<td>Cloth Expense</td>
-							<td><input type="number" name="clothExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="clothExp" step = ".01"></td>	
 						</tr>
 					
 						<tr>
@@ -292,7 +292,7 @@
 							<td><input type="text" name="pOccupation"> </td>
 							
 							<td>Cellphone Load Expense</td>
-							<td><input type="number" name="cLoadExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="cLoadExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
@@ -300,12 +300,12 @@
 							<td><input type="text" name="rToPatient"> </td>
 							
 							<td>Other Expense</td>
-							<td><input type="number" name="otherExp" step = ".01" min ="0"></td>	
+							<td><input type="number" name="otherExp" step = ".01"></td>	
 						</tr>
 						
 						<tr>
 							<td>Provider's Monthly Income</td>
-							<td><input type="number" name="pMonthInc" step = ".01" min ="0"> </td>
+							<td><input type="number" name="pMonthInc" step = ".01"> </td>
 							
 							
 						</tr>
@@ -355,9 +355,10 @@
 
 						<tr>
 							<td colspan = "4">
-								<input type="radio" name="incomeEval" value="Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family." checked>Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.<br>
-								<input type="radio" name="incomeEval" value="Total income is just enough to meet the daily basic needs of the family.">Total income is just enough to meet the daily basic needs of the family.<br>
-								<input type="radio" name="incomeEval" value="Total family income is more than enough to meet the daily needs of the family.">Total family income is more than enough to meet the daily needs of the family.<br>
+								<input type="radio" name="incomeEval" value="None" checked>Yet to evaluate.<br>
+								<input type="radio" name="incomeEval" value="Food">Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.<br>
+								<input type="radio" name="incomeEval" value="Education">Total income is just enough to meet the daily basic needs of the family.<br>
+								<input type="radio" name="incomeEval" value="Housing">Total family income is more than enough to meet the daily needs of the family.<br>
 							</td>
 						</tr>
 						
