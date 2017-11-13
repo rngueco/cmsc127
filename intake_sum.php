@@ -259,7 +259,7 @@
 						</tr>
 						
 						<?php
-						$tmp = split("[,]", $open['P_NEEDS']);
+						$tmp = explode(",", $open['P_NEEDS']);
 						$provided = "";
 						foreach($tmp as $given){
 							if($given!=""){
