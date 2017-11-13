@@ -6,31 +6,8 @@
 	<script src="script/backToIndex.js" type="text/javascript" ></script>
 	<link href="images/favi.png" type="image/png" rel="icon" />
 </head>
-<body>
-	<div class="header">
-		<div class="handle">
-			<span onclick="back()" ><h1><img src="images/LukeLogo.png" width="40px" style="float:left" /></h1>
-			<h1>uke Foundation, Inc</h1></span>
-		</div>
-	</div>
-	<div class="content">
-		<div class="content">
-		<div class="left-panel">
-			<?php include 'navigation.php' ?>
-		</div>
-		<div class="right-panel">
-		<center>
-			<h1>Search Results</h1>
-			<table cellspacing="2px" valign="middle">
-				<tr id="h">
-					<th>Last name</th>
-					<th>First Name</th>
-					<th>Type of Operation</th>
-					<th>Type of Repair</th>
-					<th>Surgeon</th>
-					<th>Action</th>
-				</tr>
-			<?php
+
+<?php
 				include 'link.php';
 				$lname = $_REQUEST["lname"];
 				$fname = $_REQUEST["fname"];
@@ -111,6 +88,34 @@
 			      $sql .= " WHERE " . implode(' AND ', $conditions);
 			    }
 			    $result = mysqli_query($link, $sql);
+				$length = mysqli_num_rows($result);
+?>
+
+<body>
+	<div class="header">
+		<div class="handle">
+			<span onclick="back()" ><h1><img src="images/LukeLogo.png" width="40px" style="float:left" /></h1>
+			<h1>uke Foundation, Inc</h1></span>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content">
+		<div class="left-panel">
+			<?php include 'navigation.php' ?>
+		</div>
+		<div class="right-panel">
+		<center>
+			<h1><?=$length?> Search Results</h1>
+			<table cellspacing="2px" valign="middle">
+				<tr id="h">
+					<th>Last name</th>
+					<th>First Name</th>
+					<th>Type of Operation</th>
+					<th>Type of Repair</th>
+					<th>Surgeon</th>
+					<th>Action</th>
+				</tr>
+			<?php
 				while($open = mysqli_fetch_array($result)){
 					$fname = $open['patient_fname'];
 					$lname = $open['patient_lname'];
