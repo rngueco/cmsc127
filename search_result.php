@@ -20,7 +20,7 @@
 		</div>
 		<div class="right-panel">
 		<center>
-			<h1>Search Results <?=$_REQUEST["eval2"]?></h1>
+			<h1>Search Results</h1>
 			<table cellspacing="2px" valign="middle">
 				<tr id="h">
 					<th>Last name</th>
