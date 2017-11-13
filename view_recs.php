@@ -100,7 +100,7 @@
                           <input type='image' src='images/view.png' width='17px' height='17px' />
                         </span>
                       </form>
-                      <form action='remove.php' action='post' style='margin-left:10%'>
+                      <form action='remove.php' action='post' style='margin-left:10%' onsubmit='return confirm(\"Are you sure you want to delete this record?\");'>
                         <input type='hidden' name='PID' value='".$id."'>
                         <span title='Delete this record'>
                           <input type='image' src='images/delete.png' width='17px' height='17px' />
