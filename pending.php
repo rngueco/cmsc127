@@ -3,6 +3,8 @@
 	<title>Luke Foundation, Inc</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="script/backToIndex.js" type="text/javascript" ></script>
+	<script src="script/approve.js" type="text/javascript" ></script>
+	<script src="script/reject.js" type="text/javascript" ></script>
 	<link href="images/favi.png" type="image/png" rel="icon" />
 </head>
 <body>
@@ -17,7 +19,7 @@
 			<?php include 'navigation.php' ?>
 		</div>
 		<div class="right-panel">
-		<center>
+		<center id = "toRep">
 			<h1>Intake Records</h1>
 			<table cellspacing="2px" valign="middle">
 				<tr id="h">
@@ -87,14 +89,14 @@
                         </span>
                       </form>
                       &nbsp;&nbsp;
-                      <form action='approve.php' method='post' onsubmit='return confirm(\"Are you sure you want to approve this patient?\");'>
+                      <form onsubmit='confirm(\"Are you sure you want to approve this patient?\"); approve();'>
                         <input type='hidden' name='iid' value='".$id."'>
                         <span title='Approve this application'>
                           <input type='image' src='images/approve.png' width='17px' height='17px' />
                         </span>
                       </form>
                       &nbsp;&nbsp;
-                      <form action='reject.php' method='post' onsubmit='return confirm(\"Are you sure you want to reject this patient?\");'>
+                      <form onsubmit='confirm(\"Are you sure you want to reject this patient?\"); reject();'>
                         <input type='hidden' name='iid' value='".$id."'>
                         <span title='Reject this application'>
                           <input type='image' src='images/reject.png' width='17px' height='17px' />

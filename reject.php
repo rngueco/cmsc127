@@ -1,13 +1,7 @@
-
 <?php
-include 'link.php';
-$id = $_POST['iid'];
-$query = "DELETE FROM intake where ID ='$id'";
-$result = mysqli_query($link, $query);
+	include 'link.php';
+	$id = $_POST['iid'];
+	$query = "DELETE FROM intake WHERE id = $id";
+	$result = mysqli_query($link, $query);
+	mysqli_fetch_array($result);
 ?>
-<html> 
-<body>
-<a href ="index.php"><h1> SUCCESS </h1></a>
-
-</body>
-</html>	

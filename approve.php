@@ -41,7 +41,6 @@
 	mysqli_query($link, $query);
 	$query = "DELETE FROM intake WHERE id = $id";
 	mysqli_query($link, $query);
-	echo "<html><body><a href = 'index.php'> home </a></body></html>";
 	
 		
 
