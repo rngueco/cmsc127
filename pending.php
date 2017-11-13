@@ -87,14 +87,14 @@
                         </span>
                       </form>
                       &nbsp;&nbsp;
-                      <form action='approve.php' method='post'>
+                      <form action='approve.php' method='post' onsubmit='return confirm(\"Are you sure you want to approve this patient?\");'>
                         <input type='hidden' name='iid' value='".$id."'>
                         <span title='Approve this application'>
                           <input type='image' src='images/approve.png' width='17px' height='17px' />
                         </span>
                       </form>
                       &nbsp;&nbsp;
-                      <form action='reject.php' method='post'>
+                      <form action='reject.php' method='post' onsubmit='return confirm(\"Are you sure you want to reject this patient?\");'>
                         <input type='hidden' name='iid' value='".$id."'>
                         <span title='Reject this application'>
                           <input type='image' src='images/reject.png' width='17px' height='17px' />
