@@ -95,8 +95,8 @@
 						<tr>
 							<td>Gender</td>
 							<td>
-								<input type="radio" name="gender" value="m" checked> Male<br>
-								<input type="radio" name="gender" value="f"> Female<br>
+								<input type="radio" name="gender" value="M" checked> Male<br>
+								<input type="radio" name="gender" value="F"> Female<br>
 							</td>
 							
 							<th colspan="2">Problems Presented</th>
