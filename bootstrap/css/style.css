@@ -1,0 +1,25 @@
+table{
+	background: white;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px;
+   	border: 1px solid #E9E9E9;
+}
+table tr{
+	text-align: left;
+}
+table th{
+	padding: 15px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #95A5A6;
+}
+table td{
+	padding-left: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	line-height: 20px;
+}
+table, th, td{
+	border: 1px solid #E9E9E9;
+}
