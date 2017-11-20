@@ -77,7 +77,7 @@
                                         <div class="col-md-3 col-lg-3">
                                             <div class="form-group">
                                                 <label for="lname">Last Name</label>
-                                                <input type='text' class="form-control" name='operation' id="lname" placeholder="Enter patient's surname" required>
+                                                <input type='text' class="form-control" name='lname' id="lname" placeholder="Enter patient's surname" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-6">
@@ -96,7 +96,7 @@
                                         <div class="col-md-3 col-lg-3">
                                             <div class="form-group">
                                                 <label for="age">Age</label>
-                                                <input type="number" class="form-control" name="age" id="age" min="0">
+                                                <input type="number" class="form-control" name="age" id="age" min="0" placeholder="Enter patient's age">
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-lg-3">
@@ -108,7 +108,12 @@
                                         <div class="col-md-3 col-lg-3">
                                             <div class="form-group">
                                                 <label for="cs">Civil Status</label>
-                                                <input type="text" class="form-control" name="cs" id="cs">
+												<select class="form-control" name = "cs" id="cs">
+													<option value="Single" selected="selected">Single</option>
+													<option value="Married">Married</option>
+													<option value="Divorced">Divorced</option>
+													<option value="Widowed">Widowed</option>
+												</select>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-lg-3">
@@ -151,7 +156,7 @@
                                             <div class="col-md-3 col-lg-3">
                                                 <div class="form-group">
                                                     <label for="provzip">ZIP Code</label>
-                                                    <input type="text" class="form-control" name="provZIP" id="provzip">
+                                                    <input type="text" class="form-control" name="provZIP" id="provzip" maxlength="4" pattern="[01-9]{4,}">
                                                 </div>
                                             </div>
 
@@ -164,7 +169,7 @@
                                             <div class="col-md-3 col-lg-3">
                                                 <div class="form-group">
                                                     <label for="preszip">ZIP Code</label>
-                                                    <input type="text" class="form-control" name="presZIP" id="preszip">
+                                                    <input type="text" class="form-control" name="presZIP" id="preszip" maxlength="4" pattern="[01-9]{4,}">
                                                 </div>
                                             </div>
                                         </div>
@@ -197,7 +202,7 @@
                                                     <label for="cpnum">Contact number</label>
                                                     <div class="input-group input-group-md">
                                                       <span class="input-group-addon">+639</span>
-                                                      <input type="text" class="form-control" name="contactNumber" id="cpnum" maxlength="9" size="15" pattern="[01-9]{9,}" >
+                                                      <input type="text" class="form-control" name="contactNumber" id="cpnum" maxlength="9" pattern="[01-9]{9,}" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -233,7 +238,7 @@
                                                     <input type="radio" name="surgerynum" id="surgerynum" value="Y">Yes
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="surgerynum" id="surgerynum" value="N">No
+                                                    <input type="radio" name="surgerynum" id="surgerynum" value="N" checked>No
                                                 </label>
                                             </div>
                                             <div class="form-group">
@@ -286,7 +291,7 @@
                                             <div class="form-group">
                                                 <label for="abnorm">Please check all areas in which the patient has an abnormality</label><br />
                                                 <label class="checkbox-inline">
-                                                    <input type="checkbox" name="abnorm" id="abnorm" value="Heart">Heart
+                                                    <input type="checkbox" name="abnorm" id="abrnorm" value="Heart">Heart
                                                 </label>
                                                 <label class="checkbox-inline">
                                                     <input type="checkbox" name="abnorm" id="abrnorm" value="Urinary System">Urinary System
@@ -658,13 +663,13 @@
                                                 <label><input type="radio" name="incomeEval" value="None" checked>Yet to evaluate.</label>
                                             </div>
                                             <div class="radio">
-                                                <label> <input type="radio" name="incomeEval" value="Food">Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.</label>
+                                                <label> <input type="radio" name="incomeEval" value="Less">Total family income is not enough to meet the daily basic needs(food, clothing, education, medical needs) of the family.</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="incomeEval" value="Education">Total income is just enough to meet the daily basic needs of the family.</label>
+                                                <label><input type="radio" name="incomeEval" value="Enou">Total income is just enough to meet the daily basic needs of the family.</label>
                                             </div>
                                             <div class="radio">
-                                                <label> <input type="radio" name="incomeEval" value="Housing">Total family income is more than enough to meet the daily needs of the family.</label>
+                                                <label> <input type="radio" name="incomeEval" value="More">Total family income is more than enough to meet the daily needs of the family.</label>
                                             </div>
                                         </div>
                                     </div>
@@ -752,18 +757,18 @@
                                     <div class="panel-body">
                                         <div class="form-group">
                                             <div class="checkbox">
-                                                <label><input type="checkbox">Social Case Study (from MSWDO / DSWD)</label>
+                                                <label><input type="checkbox" name="socialCS">Social Case Study (from MSWDO / DSWD)</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox">Indigency Certificate</label>
+                                                <label><input type="checkbox" name="indigency">Indigency Certificate</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox">Referral Letter
-                                                <input type="text" class="form-control" placeholder="from"></label>
+                                                <label><input type="checkbox" name="referral1">Referral Letter
+                                                <input type="text" class="form-control" placeholder="from" name="referral2"></label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox">Other Pertinent Documents
-                                                    <input type="text" class="form-control" placeholder="specify"></label>
+                                                <label><input type="checkbox" name="pertinent1">Other Pertinent Documents
+                                                    <input type="text" class="form-control" placeholder="specify" name="pertinent2"></label>
                                             </div>
                                         </div>
                                     </div>
