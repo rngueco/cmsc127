@@ -42,33 +42,33 @@
                 <div class="col-lg-12 col-md-12">
                     <ul class="nav nav-tabs">
                         <li>
-                            <a href="#info" data-toggle="tab">Identifying Information</a>
+                            <a href="#info">Identifying Information</a>
                         </li>
                         <li>
-                            <a href="#diag" data-toggle="tab">Diagnosis</a>
+                            <a href="#diag">Diagnosis</a>
                         </li>
                         <li>
-                            <a href="#fam" data-toggle="tab">Family History</a>
+                            <a href="#fam">Family History</a>
                         </li>
                         <li>
-                            <a href="#econ" data-toggle="tab">Economic Status</a>
+                            <a href="#econ">Economic Status</a>
                         </li>
                         <li>
-                            <a href="#plan" data-toggle="tab">Plan of Action</a>
+                            <a href="#plan">Plan of Action</a>
                         </li>
                         <li>
-                            <a href="#ref" data-toggle="tab">Referral Status</a>
+                            <a href="#ref">Referral Status</a>
                         </li>
                         <li>
-                            <a href="#rec" data-toggle="tab">Assessment and Recommendations</a>
+                            <a href="#rec">Assessment and Recommendations</a>
                         </li>
                     </ul>
                     <br />
                     <form onsubmit="new_intake()" method="post">
-                        <div class="tab-content">
+                        <div>
 
                             <!-- IDENTIFYING INFORMATION -->
-                            <div id="info" class="tab-pane active">
+                            <div id="info">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Personal Information</h3>
@@ -108,12 +108,12 @@
                                         <div class="col-md-3 col-lg-3">
                                             <div class="form-group">
                                                 <label for="cs">Civil Status</label>
-												<select class="form-control" name = "cs" id="cs">
-													<option value="Single" selected="selected">Single</option>
-													<option value="Married">Married</option>
-													<option value="Divorced">Divorced</option>
-													<option value="Widowed">Widowed</option>
-												</select>
+                                                <select class="form-control" name = "cs" id="cs">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="Divorced">Divorced</option>
+                                                    <option value="Widowed">Widowed</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-lg-3">
@@ -225,7 +225,7 @@
 
 
                             <!-- DIAGNOSIS -->
-                            <div id="diag" class="tab-pane">
+                            <div id="diag">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Diagnosis</h3>
@@ -372,7 +372,7 @@
 
 
                             <!-- FAMILY HISTORY -->
-                            <div id="fam" class="tab-pane">
+                            <div id="fam">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Details</h3>
@@ -474,7 +474,7 @@
 
 
                             <!-- ECONOMIC STATUS -->
-                            <div id="econ" class="tab-pane">
+                            <div id="econ">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Type of Housing</h3>
@@ -678,7 +678,7 @@
 
 
                             <!-- PLAN OF ACTION -->
-                            <div id="plan" class="tab-pane">
+                            <div id="plan">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -747,37 +747,39 @@
                                 </div>
                             </div>
 
-
+                            <br /><br />
                             <!-- REFERRAL STATUS -->
-                            <div id="ref" class="tab-pane">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Enclosure (Supporting Documents)</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" name="socialCS">Social Case Study (from MSWDO / DSWD)</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" name="indigency">Indigency Certificate</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" name="referral1">Referral Letter
-                                                <input type="text" class="form-control" placeholder="from" name="referral2"></label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" name="pertinent1">Other Pertinent Documents
-                                                    <input type="text" class="form-control" placeholder="specify" name="pertinent2"></label>
+                            <div id="ref">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Enclosure (Supporting Documents)</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" name="socialCS">Social Case Study (from MSWDO / DSWD)</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" name="indigency">Indigency Certificate</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" name="referral1">Referral Letter
+                                                    <input type="text" class="form-control" placeholder="from" name="referral2"></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" name="pertinent1">Other Pertinent Documents
+                                                        <input type="text" class="form-control" placeholder="specify" name="pertinent2"></label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
 
 
                             <!-- ASSESSMENT AND RECOMMENDATIONS -->
-                            <div id="rec" class="tab-pane">
+                            <div id="rec">
                                 <div class="form-group">
                                     <label for="frem">Worker's Assessment and Recommendations</label>
                                     <textarea class="form-control" name="wARec" rows = "8"></textarea>
