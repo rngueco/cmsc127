@@ -13,7 +13,6 @@
             <div id="recordsNav" class="collapse">
                 <a href="view_recs.php">&nbsp;&nbsp;&nbsp;View Records</a>
                 <a href="search.php">&nbsp;&nbsp;&nbsp;Search Records</a>
-                <a href="#">&nbsp;&nbsp;&nbsp;Add New Record</a>
             </div>
         </li>
         <li>
