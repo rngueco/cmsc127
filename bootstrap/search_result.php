@@ -126,7 +126,9 @@
                   <th>Type of Operation</th>
                   <th>Type of Repair</th>
                   <th>Surgeon</th>
-                  <th>Action</th>
+                  <th>Edit</th>
+                  <th>View</th>
+                  <th>Delete</th>
                 </tr>
                   <?php
                     while($open = mysqli_fetch_array($result)){
@@ -150,12 +152,16 @@
                               <input type='image' src='images/edit.png' width='17px' height='17px' />
                             </span>
                           </form>
+                        </td>
+                        <td>
                           <form action='summary.php' method='post'>
                             <input type='hidden' name='pid' value='".$id."'>
                               <span title='View full summary'>
                                 <input type='image' src='images/view.png' width='17px' height='17px' />
                               </span>
                           </form>
+                        </td>
+                        <td>
                           <form action='remove.php' action='post' onsubmit='return confirm(\"Are you sure you want to delete this record?\");'>
                             <input type='hidden' name='PID' value='".$id."'>
                               <span title='Delete this record'>
