@@ -60,7 +60,7 @@
                     <div class="caption">
                       <h3><span class="glyphicon glyphicon-eye-open"></span> View Pending Intakes</h3>
                       <p>View all pending applications.</p>
-                      <p><a href="#" class="btn btn-primary" role="button">Go</a></p>
+                      <p><a href="pending.php" class="btn btn-primary" role="button">Go</a></p>
                     </div>
                   </div>
                 </div>

@@ -20,6 +20,13 @@
 
 </head>
 
+<?php
+    include 'link.php';
+    $query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, clsurgery.Operation, clsurgery.Repair, clsurgery.Surgeon FROM patient RIGHT JOIN clsurgery ON patient.patient_id = clsurgery.patient_id ORDER BY patient.patient_lname";
+    $result = mysqli_query($link, $query);
+    $length = mysqli_num_rows($result);
+?>
+
 <body>
 
     <div id="wrapper">
@@ -34,7 +41,7 @@
                 <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
                 <br />
                 <div class="page-header">
-                  <h1>Surgery Records <small>Showing all records</small></h1>
+                  <h1>Surgery Records <span class="badge"><?=$length?></span></h1>
                 </div>
                 <center>
                 <table valign="middle" class="table-hover">
@@ -48,10 +55,7 @@
                     <th>View</th>
                     <th>Delete</th>
                   </tr>
-              <?php
-                include 'link.php';
-                $query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, clsurgery.Operation, clsurgery.Repair, clsurgery.Surgeon FROM patient RIGHT JOIN clsurgery ON patient.patient_id = clsurgery.patient_id ORDER BY patient.patient_lname";
-                $result = mysqli_query($link, $query);
+             <?php
 
                 // find out how many rows are in the table 
                 $sql = "SELECT COUNT(*) FROM clsurgery";
