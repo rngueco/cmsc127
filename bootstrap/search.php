@@ -35,7 +35,7 @@
                 <div class="page-header">
                   <h1>Search Records <small>Search your records by filter</small></h1>
                 </div>
-                <div class="col-md-8 col-lg-8">
+                <div class="col-md-10 col-lg-8">
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h3 class="panel-title">Choose your filter</h3>
