@@ -70,10 +70,10 @@ function new_intake(){
 		}
 	}
 	
-	var allergy = document.getElementsByName('allergy');
-	var medallergy = document.getElementsByName('medallergy');
-	var otherallergy = document.getElementsByName('otherallergy');
-	var healthprob = document.getElementsByName('healthprob');
+	var allergy = document.getElementsByName('allergy')[0].value;
+	var medallergy = document.getElementsByName('medallergy')[0].value;
+	var otherallergy = document.getElementsByName('otherallergy')[0].value;
+	var healthprob = document.getElementsByName('healthprob')[0].value;
 	
 	//Family History
 	
@@ -200,7 +200,20 @@ function new_intake(){
 	
 	//Referral Status
 	
-	
+	var socialCS = document.getElementsByName('socialCS')[0].value;
+	var indigency = document.getElementsByName('indigency')[0].value;
+	var referral;
+	if(document.getElementsByName('referral1')[0].checked){
+		referral = document.getElementsByName('referral2')[0].value;
+	}else{
+		referral = "";
+	}
+	//var pertinent1 = document.getElementsByName('')[0].value;
+	if(document.getElementsByName('pertinent1')[0].checked){
+		pertinent = document.getElementsByName('pertinent2')[0].value;
+	}else{
+		pertinent = "";
+	}
 	
 	//Assessment and Recommendations
 	
@@ -208,7 +221,7 @@ function new_intake(){
 	
 	xhttp.open("POST","new_intakerec.php", true);
 	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xhttp.send("fname=" + fname + "&lname=" + lname + "&minitial=" + minit + "&age=" + age + "&weight=" + weight + "&cs=" + cs + "&birthDate=" + birthDate + "&birthplace=" + birthplace + "&gender=" + sex + "&presentAddress=" + presentAddress +  "&provAddress=" + provAddress + "&presZIP=" + presZIP + "&provZIP=" +provZIP + "&religion=" + religion + "&occupation=" + occupation + "&monthlyIncome=" + monthlyIncome + "&contactNumber=" + contactNumber +"&educBack=" + educBack + "&surgerynum=" + surgerynum + "&surgerytype=" + surgerytype + "&cLip=" + cLip + "&cPalate=" + cPalate + "&diagnosis=" + diagnosis + "&abnorm=" + abnorm + "&allergy=" +allergy + "&medallergy=" + medallergy + "&otherallergy=" + otherallergy + "&healthprob=" + healthprob + "&preg=" + pregnancy + "&pcomplications=" + pcomplications + "&bcomplications=" + bcomplications + "&smoke=" + smoke + "&alc=" + alc + "&immed=" + immed + "&distant=" + distant + "&houseStat=" + houseStat + "&houseOwn=" + houseOwn + "&toiletType=" + toiletType + "&waterSource=" + waterSource + "&numOccupants=" + numOccupants + "&numFloors=" + numFloors + "&numRooms=" + numRooms + "&elecExp=" + elecExp +  "&fuelExp=" + fuelExp + "&waterExp=" + waterExp + "&educExp=" + educExp + "&medExp=" + medExp + "&foodExp=" + foodExp + "&rentExp=" + rentExp + "&transExp=" + transExp + "&clothExp=" + clothExp + "&cLoadExp=" + cLoadExp + "&otherExp=" + otherExp + "&pFullName=" + pFullName + "&pOccupation=" + pOccupation + "&rToPatient=" + rToPatient + "&pMonthInc=" + pMonthInc + "&agencyName=" + agencyName + "&ngo=" + ngo + "&go=" + go + "&needsProvided=" + needsProvided + "&servicesProvided=" + servicesProvided + "&incomeEval=" + incomeEval + "&medDate=" + medDate + "&cpDate=" + cpDate + "&admDate=" + admDate + "&surgeDate=" + surgeDate + "&dsDate=" + dsDate + "&fDate=" + fDate + "&medRemarks=" + medRemarks + "&cpRemarks=" + cpRemarks + "&admRemarks=" + admRemarks + "&surgeRemarks=" + surgeRemarks + "&dsRemarks=" + dsRemarks + "&fRemarks=" + fRemarks + "&wARec=" + wARec);
+	xhttp.send("fname=" + fname + "&lname=" + lname + "&minitial=" + minit + "&age=" + age + "&weight=" + weight + "&cs=" + cs + "&birthDate=" + birthDate + "&birthplace=" + birthplace + "&gender=" + sex + "&presentAddress=" + presentAddress +  "&provAddress=" + provAddress + "&presZIP=" + presZIP + "&provZIP=" +provZIP + "&religion=" + religion + "&occupation=" + occupation + "&monthlyIncome=" + monthlyIncome + "&contactNumber=" + contactNumber +"&educBack=" + educBack + "&surgerynum=" + surgerynum + "&surgerytype=" + surgerytype + "&cLip=" + cLip + "&cPalate=" + cPalate + "&diagnosis=" + diagnosis + "&abnorm=" + abnorm + "&allergy=" +allergy + "&medallergy=" + medallergy + "&otherallergy=" + otherallergy + "&healthprob=" + healthprob + "&preg=" + pregnancy + "&pcomplications=" + pcomplications + "&bcomplications=" + bcomplications + "&smoke=" + smoke + "&alc=" + alc + "&immed=" + immed + "&distant=" + distant + "&houseStat=" + houseStat + "&houseOwn=" + houseOwn + "&toiletType=" + toiletType + "&waterSource=" + waterSource + "&numOccupants=" + numOccupants + "&numFloors=" + numFloors + "&numRooms=" + numRooms + "&elecExp=" + elecExp +  "&fuelExp=" + fuelExp + "&waterExp=" + waterExp + "&educExp=" + educExp + "&medExp=" + medExp + "&foodExp=" + foodExp + "&rentExp=" + rentExp + "&transExp=" + transExp + "&clothExp=" + clothExp + "&cLoadExp=" + cLoadExp + "&otherExp=" + otherExp + "&pFullName=" + pFullName + "&pOccupation=" + pOccupation + "&rToPatient=" + rToPatient + "&pMonthInc=" + pMonthInc + "&agencyName=" + agencyName + "&ngo=" + ngo + "&go=" + go + "&needsProvided=" + needsProvided + "&servicesProvided=" + servicesProvided + "&incomeEval=" + incomeEval + "&medDate=" + medDate + "&cpDate=" + cpDate + "&admDate=" + admDate + "&surgeDate=" + surgeDate + "&dsDate=" + dsDate + "&fDate=" + fDate + "&medRemarks=" + medRemarks + "&cpRemarks=" + cpRemarks + "&admRemarks=" + admRemarks + "&surgeRemarks=" + surgeRemarks + "&dsRemarks=" + dsRemarks + "&fRemarks=" + fRemarks + "&socialCS=" + socialCS + "&indigency=" + indigency + "&referral=" + referral+ "&pertinent=" + pertinent + "&wARec=" + wARec);
 	
 	var cont = document.getElementById("toRep");
 	cont.innerHTML = "<h1>Successful</h1>";
