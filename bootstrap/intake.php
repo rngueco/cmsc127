@@ -179,11 +179,11 @@
 											<label for="educbg">Educational Background</label>
 											<select class="form-control" name = "educBack" id="educbg">
 												<option value="None" selected="selected">No Schooling Attended</option>
-												<option value="Elementary">Elementary</option>
-												<option value="High School">High School</option>
-												<option value="College Undergraduate">College Undergraduate</option>
-												<option value="College Graduate" >College Graduate</option>
-												<option value="Vocational" >Vocational</option>
+												<option value="Elem">Elementary</option>
+												<option value="HS">High School</option>
+												<option value="C_Under">College Undergraduate</option>
+												<option value="C_Grad" >College Graduate</option>
+												<option value="Voc" >Vocational</option>
 											</select>
 										</div>
 									</div>
