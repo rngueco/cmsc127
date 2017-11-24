@@ -46,6 +46,7 @@
               <div class="page-header">
                 <h1>Pending Intakes <span class="badge"><?=$length?></span></h1>
               </div>
+            <div id="toRep">
               <center>
               <table valign="middle" class="table-hover">
                 <tr id="h">
@@ -176,6 +177,7 @@
         /****** end build pagination links ******/
         ?>
             </center>
+          </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
