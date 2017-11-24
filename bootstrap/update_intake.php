@@ -34,6 +34,14 @@
                 <div class="page-header">
                     <h1>Edit Intake</h1>
                 </div>
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Success! </strong>Intake form successfully updated.
+                </div>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Note: </strong>The fields in this form are still editable but no further changes will be made to the updated record.
+                </div>
                 <div class="col-lg-12 col-md-12" id="toRep">
 					<?php 
 						include 'link.php';
@@ -876,6 +884,12 @@
 							<div class="form-group">
 								<label for="frem">Worker's Assessment and Recommendations</label>
                                 <textarea class="form-control" name="wARec" rows = "8"><?=$open['W_A_R']?></textarea>
+							</div>
+
+							<div class="col-md-12 col-lg-12">
+								<center>
+									<a href="pending.php" class="btn btn-primary">View more pending intakes</a>
+								</center>
 							</div>
                         </div>
                 </div>
