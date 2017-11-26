@@ -24,7 +24,7 @@
         include 'link.php';
         $lname = $_REQUEST["lname"];
         $fname = $_REQUEST["fname"];
-        $query = "SELECT lname, fname, id FROM intake";
+        $query = "SELECT lname, fname, id, defer FROM intake";
           
 		$conditions = array();
 		if($lname != "") {
@@ -57,6 +57,10 @@
                 <div class="page-header">
                   <h1>Search Results <span class="badge"><?=$length?></span></h1>
                 </div>
+				<div class="alert alert-info alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>Tip:</strong> Green: Pending. Red: Deferred.
+				</div>
                 <table class="table-hover" valign="middle">
                 <tr id="h">
                   <th>Last name</th>
@@ -71,8 +75,14 @@
                       $fname = $open['fname'];
                       $lname = $open['lname'];
                       $id = $open['id'];
+					  $stat;
+					  if($open['defer']=='N'){
+						  $stat = 'success';
+					  }else{
+						  $stat = 'danger';
+					  }
                       echo "
-                      <tr>
+                      <tr class='alert alert-".$stat."'>
                         <td>".$lname."</td>
                         <td>".$fname."</td>
                         <td>
@@ -92,16 +102,14 @@
                       </form>
                     </td>
                     <td>
-                      <form onsubmit='confirm(\"Are you sure you want to approve this patient?\"); approve();'>
-                        <input type='hidden' name='iid' value='".$id."'>
+                      <form onsubmit='confirm(\"Are you sure you want to approve this patient?\"); approve(".$id.");'>
                         <span title='Approve this application'>
                           <input type='image' src='images/approve.png' width='17px' height='17px' />
                         </span>
                       </form>
                     </td>
                     <td>
-                      <form onsubmit='confirm(\"Are you sure you want to reject this patient?\"); reject();'>
-                        <input type='hidden' name='iid' value='".$id."'>
+                      <form onsubmit='confirm(\"Are you sure you want to reject this patient?\"); reject(".$id.");'>
                         <span title='Reject this application'>
                           <input type='image' src='images/reject.png' width='17px' height='17px' />
                         </span>

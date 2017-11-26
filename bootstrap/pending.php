@@ -26,7 +26,7 @@
 
 <?php
     include 'link.php';
-    $query = "SELECT fname, lname FROM intake";
+    $query = "SELECT fname, lname FROM intake WHERE defer = 'N'";
     $result = mysqli_query($link, $query);
     $length = mysqli_num_rows($result);
 ?>
@@ -59,7 +59,7 @@
                 </tr>
             <?php
         // find out how many rows are in the table 
-        $sql = "SELECT COUNT(*) FROM intake";
+        $sql = "SELECT COUNT(*) FROM intake WHERE defer = 'N'";
         $result = mysqli_query($link, $sql) or trigger_error("SQL", E_USER_ERROR);
         $r = mysqli_fetch_row($result);
         $numrows = $r[0];
@@ -88,7 +88,7 @@
         // the offset of the list, based on current page 
         $offset = ($currentpage - 1) * $rowsperpage;
         // get the info from the db 
-        $sql = "SELECT fname, lname, id FROM intake ORDER BY lname LIMIT $offset, $rowsperpage";
+        $sql = "SELECT fname, lname, id FROM intake WHERE defer = 'N' ORDER BY lname LIMIT $offset, $rowsperpage";
         $result = mysqli_query($link, $sql) or trigger_error("SQL", E_USER_ERROR);
         // while there are rows to be fetched...
         while($open = mysqli_fetch_array($result)){
@@ -119,16 +119,14 @@
                       </form>
                     </td>
                     <td>
-                      <form onsubmit='confirm(\"Are you sure you want to approve this patient?\"); approve();'>
-                        <input type='hidden' name='iid' value='".$id."'>
+                      <form onsubmit='confirm(\"Are you sure you want to approve this patient?\"); approve(".$id.");'>
                         <span title='Approve this application'>
                           <input type='image' src='images/approve.png' width='17px' height='17px' />
                         </span>
                       </form>
                     </td>
                     <td>
-                      <form onsubmit='confirm(\"Are you sure you want to reject this patient?\"); reject();'>
-                        <input type='hidden' name='iid' value='".$id."'>
+                      <form onsubmit='confirm(\"Are you sure you want to reject this patient?\"); reject(".$id.");'>
                         <span title='Reject this application'>
                           <input type='image' src='images/reject.png' width='17px' height='17px' />
                         </span>

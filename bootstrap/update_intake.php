@@ -146,7 +146,7 @@
                 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                 <div class="page-header">
                     <?php 
-                    		echo "<h1>Edit Intake for ".$open['FNAME']." ".$open['LNAME']."</h1>" 
+                    		echo "<h1>Intake Record for ".$open['FNAME']." ".$open['LNAME']."</h1>" 
                     ?>
                 </div>
                 <div class="alert alert-info alert-dismissible" role="alert">
@@ -889,12 +889,20 @@
 									$philhealth = $open["PHILHEALTH"];
 								?>	
 								<div class="checkbox">
-                                    <label><input type="checkbox" name="philhealth" <?php if($philhealth!==false) echo "checked"; else echo "disabled"; ?>>This surgery is PhilHealth eligible</label>
+                                    <label>This surgery is <?php if($philhealth===false) echo "not"; ?> PhilHealth eligible</label>
                                 </div>
 							</div>
 							<div class="col-md-12 col-lg-12">
+								<?php
+									$stat;
+									if($open['DEFER']=='N'){
+										$stat = 'pending';
+									}else{
+										$stat = 'deferred';
+									}
+								?>
 								<center>
-									<a href="pending.php" class="btn btn-primary">View more pending intakes</a>
+									<a href="<?=$stat?>.php" class="btn btn-primary">View more <?=$stat?> intakes</a>
 								</center>
 							</div>
                         </div>
@@ -916,11 +924,9 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-
     $(':radio,:checkbox').click(function(){
     return false;
 	});
-
 	$('option:not(:selected)').prop('disabled', true);
     </script>
 
