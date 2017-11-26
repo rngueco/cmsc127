@@ -740,6 +740,11 @@
 								<label for="frem">Worker's Assessment and Recommendations</label>
                                 <textarea class="form-control" name="wARec" rows = "8"></textarea>
 							</div>
+							<div class="form-group">
+								<div class="checkbox">
+                                    <label><input type="checkbox" name="philhealth">This surgery is PhilHealth eligible</label>
+                                </div>
+							</div>
                             <div class="form-group">
 								<center>
 									<input type="submit" value="Submit" class="btn btn-primary">
