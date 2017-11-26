@@ -11,6 +11,27 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css" media="all">
+        @media print {
+          html, body{
+            margin-top: -15pt;
+            padding: 0;
+            background: #FFF; 
+            font-size: 9.5pt;
+            overflow-y:visible;
+            float:none;
+          }
+          h1, h3{
+            font-size: 10pt;
+          }
+          #menu-toggle{
+            visibility:hidden;
+          }
+          [class*="col-md"], [class*="col-sm"], [class*="col-xs"] {
+        	float: none;
+    		}
+        }
+      </style>
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">

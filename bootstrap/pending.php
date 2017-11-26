@@ -119,14 +119,14 @@
                       </form>
                     </td>
                     <td>
-                      <form onsubmit='confirm(\"Are you sure you want to approve this patient?\"); approve(".$id.");'>
+                      <form onsubmit='if(confirm(\"Are you sure you want to approve this patient?\")){ approve(".$id."); }'>
                         <span title='Approve this application'>
                           <input type='image' src='images/approve.png' width='17px' height='17px' />
                         </span>
                       </form>
                     </td>
                     <td>
-                      <form onsubmit='confirm(\"Are you sure you want to reject this patient?\"); reject(".$id.");'>
+                      <form onsubmit='if(confirm(\"Are you sure you want to reject this patient?\")){ reject(".$id."); }'>
                         <span title='Reject this application'>
                           <input type='image' src='images/reject.png' width='17px' height='17px' />
                         </span>

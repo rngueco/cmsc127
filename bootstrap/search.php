@@ -60,6 +60,14 @@
                           <input type="text" class="form-control" name="surgeon" placeholder="Enter name of surgeon">
                         </div>
                         <div class="form-group">
+                          <label for="surgeon">By name of anesthesiologist</label>
+                          <input type="text" class="form-control" name="anesthesia" placeholder="Enter name of anesthesiologist">
+                        </div>
+                        <div class="form-group">
+                          <label for="surgeon">By name of pediatrician</label>
+                          <input type="text" class="form-control" name="pedia" placeholder="Enter name of pediatrician">
+                        </div>
+                        <div class="form-group">
                           <label for="operation">By type of operation</label>
                           <input type="text" class="form-control" name="operation" placeholder="Enter description of operation">
                         </div>

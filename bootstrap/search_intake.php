@@ -32,7 +32,7 @@
             <div class="container-fluid">
                 <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
                 <div class="page-header">
-                  <h1>Search Intakes <small>Search your records by filter</small></h1>
+                  <h1>Search Intakes <small>Search your intake records by filter</small></h1>
                 </div>
                 <div class="col-md-10 col-lg-8">
                   <div class="panel panel-default">

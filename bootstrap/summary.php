@@ -12,9 +12,30 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css" media="all">
+        @media print {
+          html, body {
+            margin-top: -20pt;
+            padding: 0;
+            background: #FFF; 
+            font-size: 9.5pt;
+          }
+          h1{
+            font-size: 10pt;
+          }
+          #menu-toggle{
+            visibility:hidden;
+          }
+          [class*="col-md"], [class*="col-sm"], [class*="col-xs"] {
+          float: none;
+          }
+        }
+      </style>
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- <link href="css/print.css" rel="stylesheet" media="print"> -->
+
 
 </head>
 
@@ -65,7 +86,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
+            <div class="container-fluid" id="print-content">
                 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                 <div class="page-header">
                     <?php 
@@ -174,9 +195,6 @@
                             <input type='hidden' name='PID' value='".$open['patient_id']."'>
                             <input type='image' src='images/delete.png' width='17px' height='17px' onclick=\"return confirm('Are you sure you want to delete this record?');\">
                         </form>
-                        <span title='Print This Record'>
-                            <input type='image' src='images/printer.png' onclick=\"printDiv('print-content')\" width = \"17px\" height = \"17px\"/>
-                        </span>
                     </center>
                     ";
                     ?>

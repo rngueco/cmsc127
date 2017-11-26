@@ -28,10 +28,10 @@
           
 		$conditions = array();
 		if($lname != "") {
-			$conditions[] = "lname='$lname'";
+			$conditions[] = "lname LIKE '%$lname%'";
 		}
 		if($fname != "") {
-			$conditions[] = "fname='$fname'";
+			$conditions[] = "fname LIKE '%$fname%'";
 		}
         
 		$sql = $query;
@@ -59,7 +59,7 @@
                 </div>
 				<div class="alert alert-info alert-dismissible" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<strong>Tip:</strong> Green: Pending. Red: Deferred.
+					<strong>Tip:</strong> A green row means the application is pending while a red row means the application is deferred.
 				</div>
                 <table class="table-hover" valign="middle">
                 <tr id="h">

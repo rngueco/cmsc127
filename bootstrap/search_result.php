@@ -25,6 +25,8 @@
         $lname = $_REQUEST["lname"];
         $fname = $_REQUEST["fname"];
         $surgeon = $_REQUEST["surgeon"];
+        $anesthesia = $_REQUEST["anesthesia"];
+        $pedia = $_REQUEST["pedia"];
         $clip = $_REQUEST["clip"];
         $cpalate = $_REQUEST["cpalate"];
         $operation = $_REQUEST["operation"];
@@ -40,30 +42,36 @@
         $dis2 = $_REQUEST["dis2"];
         $fup1 = $_REQUEST["fup1"];
         $fup2 = $_REQUEST["fup2"];
-        $query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, clsurgery.Operation, clsurgery.Repair, clsurgery.Surgeon 
+        $query = "SELECT patient.patient_id, patient.patient_fname, patient.patient_lname, clsurgery.Operation, clsurgery.Repair, clsurgery.Surgeon, clsurgery.Anesthesiologist, clsurgery.Pediatrician 
         FROM patient RIGHT JOIN clsurgery ON patient.patient_id = clsurgery.patient_id";
           
           $conditions = array();
           if($lname != "") {
-            $conditions[] = "patient.patient_lname='$lname'";
+            $conditions[] = "patient.patient_lname LIKE '%$lname%'";
           }
           if($fname != "") {
-            $conditions[] = "patient.patient_fname='$fname'";
+            $conditions[] = "patient.patient_fname LIKE '%$fname%'";
           }
           if($surgeon != "") {
-            $conditions[] = "clsurgery.surgeon='$surgeon'";
+            $conditions[] = "clsurgery.surgeon LIKE '%$surgeon%'";
+          }
+          if($anesthesia != "") {
+            $conditions[] = "clsurgery.anesthesiologist LIKE '%$anesthesia%'";
+          }
+          if($pedia != "") {
+            $conditions[] = "clsurgery.pediatrician LIKE '%$pedia%'";
           }
           if($clip != "None"){
-            $conditions[] = "clsurgery.cl_lip='$clip'";
+            $conditions[] = "clsurgery.cl_lip LIKE '%$clip%'";
           }
           if($cpalate != "None"){
-            $conditions[] = "clsurgery.cl_palate='$cpalate'";
+            $conditions[] = "clsurgery.cl_palate LIKE '%$cpalate%'";
           }
           if($operation != ""){
-            $conditions[] = "clsurgery.operation='$operation'";
+            $conditions[] = "clsurgery.operation LIKE '%$operation%'";
           }
           if($repair != ""){
-            $conditions[] = "clsurgery.repair='$repair'";
+            $conditions[] = "clsurgery.repair LIKE '%$repair%'";
           }
           if($eval1){
           $conditions[] = "'$eval1'<=clsurgery.evaluation_date";
