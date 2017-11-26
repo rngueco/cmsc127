@@ -19,6 +19,14 @@
     <script src="script/new_intake.js" type="text/javascript"></script>
 </head>
 
+<?php 
+						include 'link.php';
+						$id = $_POST['iid'];
+						$query = "SELECT * FROM intake WHERE id = $id";
+						$result = mysqli_query($link, $query);
+						$open = mysqli_fetch_array($result);
+						?>
+
 <body>
 
     <div id="wrapper">
@@ -32,17 +40,12 @@
             <div class="container-fluid">
                 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                 <div class="page-header">
-                    <h1>Edit Intake</h1>
+                    <?php 
+                    		echo "<h1>Edit Intake for ".$open['FNAME']." ".$open['LNAME']."</h1>" 
+                    ?>
                 </div>
                 <div class="col-lg-12 col-md-12" id="toRep">
                     <form action="update_intake.php" method="post">
-						<?php 
-						include 'link.php';
-						$id = $_POST['iid'];
-						$query = "SELECT * FROM intake WHERE id = $id";
-						$result = mysqli_query($link, $query);
-						$open = mysqli_fetch_array($result);
-						?>
                         <div>
                             <!-- IDENTIFYING INFORMATION -->
                             <div class="panel panel-default">
@@ -772,6 +775,14 @@
 							<div class="form-group">
 								<label for="frem">Worker's Assessment and Recommendations</label>
                                 <textarea class="form-control" name="wARec" rows = "8"><?=$open['W_A_R']?></textarea>
+							</div>
+							<div class="form-group">
+								<?php
+									$philhealth = $open["PHILHEALTH"];
+								?>	
+								<div class="checkbox">
+                                    <label><input type="checkbox" name="philhealth" <?php if($philhealth!==false) echo "checked" ?>>This surgery is PhilHealth eligible</label>
+                                </div>
 							</div>
                             <div class="form-group">
 								<center>

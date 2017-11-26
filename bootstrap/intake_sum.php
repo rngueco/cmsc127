@@ -20,118 +20,12 @@
 </head>
 
 <?php 
-						include 'link.php';
-						$id = $_POST['iid'];
-						$FNAME = $_POST['fname'];
-						$LNAME = $_POST['lname'];
-						$MI = $_POST['minitial'];
-				
-						$AGE = $_POST['age'];
-						$WEIGHT = $_POST['weight'];
-						$CS = $_POST['cs'];
-				
-						$BIRTHPLACE = $_POST['birthplace'];
-						$BIRTHDATE = $_POST['birthDate'];
-						$GENDER = $_POST['gender'];
-				
-						$PRES_ADD = $_POST['presentAddress'];
-						$PROV_ADD = $_POST['provAddress'];
-						$PRES_ZIP = $_POST['presZIP'];
-						$PROV_ZIP = $_POST['provZIP'];
-				
-						$RELIGION = $_POST['religion'];
-						$OCCU = $_POST['occupation'];
-						$M_INCOME = $_POST['monthlyIncome'];
-						$CNUM = $_POST['contactNumber'];
-						$EDUC_BG = $_POST['educBack'];
-				
-						$SURGERYNUM = $_POST['surgerynum'];
-						if($SURGERYNUM == "N"){
-							$SURGERYTYPE = "0";
-						}else{
-							$SURGERYTYPE = $_POST['surgerytype'];
-						}
-						$CL_LIP = $_POST['cLip'];
-						$CL_PALATE = $_POST['cPalate'];
-						$DIAG = $_POST['diagnosis'];
-						$ABNORM = "";
-						if(!empty($_POST['abnorm'])){
-							foreach($_POST['abnorm'] as $selected){
-								$ABNORM = $ABNORM . $selected . ",";
-							}
-						}
-						$ALLERGY = $_POST['allergy'];
-						$M_ALLERGY = $_POST['medallergy'];
-						$O_ALLERGY = $_POST['otherallergy'];
-						$HEALTH_PROB = $_POST['healthprob'];
-				
-						$PREG = $_POST['preg'];
-						$PCOMP = $_POST['pcomplications'];
-						$BCOMP = $_POST['bcomplications'];
-						$SMOKE = $_POST['smoke'];
-						$ALC = $_POST['alc'];
-						$IMMED = $_POST['immed'];
-						$DISTANT = $_POST['distant'];
-				
-						$H_STAT = $_POST['houseStat'];
-						$H_OWN = $_POST['houseOwn'];
-						$TOILET = $_POST['toiletType'];
-						$WATER = $_POST['waterSource'];
-						$H_OCCU = $_POST['numOccupants'];
-						$H_FLRS = $_POST['numFloors'];
-						$H_RMS = $_POST['numRooms'];
-				
-						$E_BILL = $_POST['elecExp'];
-						$FUEL_EXP = $_POST['fuelExp'];
-						$WATER_BILL = $_POST['waterExp'];
-						$EDUC_EXP = $_POST['educExp'];
-						$MED_EXP = $_POST['medExp'];
-						$FOOD_EXP = $_POST['foodExp'];
-						$RENT_EXP = $_POST['rentExp'];
-						$TRANSPO = $_POST['transExp'];
-						$CLOTH_EXP = $_POST['clothExp'];
-						$CP_LOAD = $_POST['cLoadExp'];
-						$OTHER_EXP = $_POST['otherExp'];
-						
-						$P_NAME = $_POST['pFullName'];
-						$P_OCCU = $_POST['pOccupation'];
-						$P_REL = $_POST['rToPatient'];
-						$P_INC = $_POST['pMonthInc'];
-						$A_NAME = $_POST['agencyName'];
-						$A_NGO = $_POST['ngo'];
-						$A_GO = $_POST['go'];
-						$P_NEEDS = "";
-						if(!empty($_POST['needsProvided'])){
-							foreach($_POST['needsProvided'] as $selected){
-								$P_NEEDS = $P_NEEDS . $selected . ",";
-							}
-						}
-						$A_SERV = $_POST['servicesProvided'];
-						$FAM_INC = $_POST['incomeEval'];
-				
-						$MED_DATE = $_POST['medDate'];
-						$CP_CLEAR_DATE = $_POST['cpDate'];
-						$AD_DATE = $_POST['admDate'];
-						$SUR_DATE = $_POST['surgeDate'];
-						$DC_DATE = $_POST['dsDate'];
-						$FF_DATE = $_POST['fDate'];
-						
-						$MED_REM = $_POST['medRemarks'];
-						$CP_CLEAR_REM = $_POST['cpRemarks'];
-						$AD_REM = $_POST['admRemarks'];
-						$SUR_REM = $_POST['surgeRemarks'];
-						$DC_REM = $_POST['dsRemarks'];
-						$FF_REM = $_POST['fRemarks'];
-						$W_A_R = $_POST['wARec'];
-				
-						$query2 = "UPDATE INTAKE SET FNAME = '$FNAME', LNAME = '$LNAME', MI = '$MI', AGE = '$AGE', WEIGHT = '$WEIGHT', CS = '$CS', BIRTHDATE = '$BIRTHDATE', BIRTHPLACE = '$BIRTHPLACE', GENDER = '$GENDER', PROV_ADD = '$PROV_ADD', PRES_ADD = '$PRES_ADD', PROV_ZIP = '$PROV_ZIP', PRES_ZIP = '$PRES_ZIP', RELIGION = '$RELIGION', OCCU = '$OCCU', M_INCOME = '$M_INCOME', CNUM = '$CNUM', EDUC_BG = '$EDUC_BG', SURGERYNUM = '$SURGERYNUM', SURGERYTYPE = '$SURGERYTYPE', CL_LIP = '$CL_LIP', CL_PALATE = '$CL_PALATE', DIAG = '$DIAG', ABNORM = '$ABNORM', ALLERGY = '$ALLERGY', M_ALLERGY = '$M_ALLERGY', O_ALLERGY = '$O_ALLERGY', HEALTH_PROB = '$HEALTH_PROB', PREG = '$PREG', PCOMP = '$PCOMP', BCOMP = '$BCOMP', SMOKE = '$SMOKE', ALC = '$ALC', IMMED = '$IMMED', DISTANT = '$DISTANT', H_STAT = '$H_STAT', H_OWN = '$H_OWN', TOILET = '$TOILET', WATER = '$WATER', H_OCCU = '$H_OCCU', H_FLRS = '$H_FLRS', H_RMS = '$H_RMS', E_BILL = '$E_BILL', FUEL_EXP = '$FUEL_EXP', WATER_BILL = '$WATER_BILL', EDUC_EXP = '$EDUC_EXP', MED_EXP = '$MED_EXP', FOOD_EXP = '$FOOD_EXP', RENT_EXP = '$RENT_EXP', TRANSPO = '$TRANSPO', CLOTH_EXP = '$CLOTH_EXP', CP_LOAD = '$CP_LOAD', OTHER_EXP = '$OTHER_EXP', P_NAME = '$P_NAME', P_OCCU = '$P_OCCU', P_REL = '$P_REL', P_INC = '$P_INC', A_NAME = '$A_NAME', A_NGO = '$A_NGO', A_GO = '$A_GO', P_NEEDS = '$P_NEEDS', A_SERV = '$A_SERV', FAM_INC = '$FAM_INC', MED_DATE = '$MED_DATE', CP_CLEAR_DATE = '$CP_CLEAR_DATE', AD_DATE = '$AD_DATE', SUR_DATE = '$SUR_DATE', DC_DATE = '$DC_DATE', FF_DATE = '$FF_DATE', MED_REM = '$MED_REM', CP_CLEAR_REM = '$CP_CLEAR_REM', AD_REM = '$AD_REM', SUR_REM = '$SUR_REM', DC_REM = '$DC_REM', FF_REM = '$FF_REM', W_A_R = '$W_A_R' WHERE ID = '$id' ";
-						$result2 = mysqli_query($link, $query2);
-				
-						$query = "SELECT * FROM intake WHERE id = $id";
-						$result = mysqli_query($link, $query);
-						$open = mysqli_fetch_array($result);
-					?>
-
+			include 'link.php';
+			$id = $_POST['iid'];
+			$query = "SELECT * FROM intake WHERE id = $id";
+			$result = mysqli_query($link, $query);
+			$open = mysqli_fetch_array($result);
+?>
 <body>
 
     <div id="wrapper">
@@ -146,12 +40,8 @@
                 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                 <div class="page-header">
                     <?php 
-                    		echo "<h1>Edit Intake for ".$open['FNAME']." ".$open['LNAME']."</h1>" 
+                    	echo "<h1>View Intake Summary for ".$open['FNAME']." ".$open['LNAME']."</h1>" 
                     ?>
-                </div>
-                <div class="alert alert-info alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>Success! </strong>Intake form successfully updated.
                 </div>
                 <div class="col-lg-12 col-md-12" id="toRep">
                         <div>
