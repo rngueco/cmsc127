@@ -19,7 +19,7 @@
             <a href="#intakeNav" data-toggle="collapse">Intake</a>
             <div id="intakeNav" class="collapse">
                 <a href="pending.php">&nbsp;&nbsp;&nbsp;View Pending Intakes</a>
-                <a href="#">&nbsp;&nbsp;&nbsp;Search Pending Intakes</a>
+                <a href="search_intake.php">&nbsp;&nbsp;&nbsp;Search Pending Intakes</a>
                 <a href="#">&nbsp;&nbsp;&nbsp;View Deferred Intakes</a>
                 <a href="intake.php">&nbsp;&nbsp;&nbsp;Add New Intake</a>
             </div>

@@ -69,7 +69,7 @@
                     <div class="caption">
                       <h3><span class="glyphicon glyphicon-search"></span> Search Intakes</h3>
                       <p>Search for pending applications.</p>
-                      <p><a href="#" class="btn btn-primary" role="button">Go</a></p>
+                      <p><a href="search_intake.php" class="btn btn-primary" role="button">Go</a></p>
                     </div>
                   </div>
                 </div>
