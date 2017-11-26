@@ -150,6 +150,14 @@
                           <label for="surgeon">Surgeon</label>
                           <input type='text' class="form-control" name='surgeon' id="surgeon" value='<?=$open['Surgeon']?>'>
                         </div>
+                        <div class="form-group">
+                          <label for="surgeon">Anesthesiologist</label>
+                          <input type='text' class="form-control" name='anesthesiologist' id="anesthesiologist" value='<?=$open['Anesthesiologist']?>'>
+                        </div>
+                        <div class="form-group">
+                          <label for="surgeon">Pediatrician</label>
+                          <input type='text' class="form-control" name='pedia' id="pedia" value='<?=$open['Pediatrician']?>'>
+                        </div>
                       </div>
                     </div>
                   </div>

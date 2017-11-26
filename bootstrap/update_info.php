@@ -26,6 +26,8 @@
         $operation = $_POST['operation'];
         $repair = $_POST['repair'];
         $surgeon = $_POST['surgeon'];
+        $anesthesiologist = $_POST['anesthesiologist'];
+        $pedia = $_POST['pedia'];
         $hospital = $_POST['hospital'];
         $lab = $_POST['lab'];
         $surgery = $_POST['surgery'];
@@ -34,8 +36,9 @@
         $discharge = $_POST['discharge'];
         $follow = $_POST['follow'];
 
+
         $query = "UPDATE clsurgery SET Cl_Lip = '$clip', Cl_Palate = '$cpalate', Operation = '$operation', 
-        Repair = '$repair', Surgeon = '$surgeon', Hospital_Bill = '$hospital', Lab_fee = '$lab', Evaluation_Date = '$eval', 
+        Repair = '$repair', Surgeon = '$surgeon', Anesthesiologist = '$anesthesiologist', Pediatrician = '$pedia', Hospital_Bill = '$hospital', Lab_fee = '$lab', Evaluation_Date = '$eval', 
         Admission_Date = '$admission', Surgery_Date = '$surgery', Discharge_Date = '$discharge', Follow_Up_Date = '$follow' WHERE patient_id = $id";
         $result = mysqli_query($link, $query);
 
@@ -174,6 +177,12 @@
                         <dl class="dl-horizontal">
                           <dt>Surgeon</dt>
                           <dd><?=$open2['Surgeon'] ?></dd>
+
+                          <dt>Anesthesiologist</dt>
+                          <dd><?=$open2['Anesthesiologist'] ?></dd>
+
+                          <dt>Pediatrician</dt>
+                          <dd><?=$open2['Pediatrician'] ?></dd>
                         </dl>
                       </div>
                     </div>

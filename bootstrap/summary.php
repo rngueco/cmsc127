@@ -153,6 +153,12 @@
                         <dl class="dl-horizontal">
                           <dt>Surgeon</dt>
                           <dd><?=$open['Surgeon'] ?></dd>
+
+                          <dt>Anesthesiologist</dt>
+                          <dd><?=$open['Anesthesiologist'] ?></dd>
+
+                          <dt>Pediatrician</dt>
+                          <dd><?=$open['Pediatrician'] ?></dd>
                         </dl>
                       </div>
                     </div>
