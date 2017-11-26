@@ -44,6 +44,8 @@ create table clsurgery(
 	Operation varchar(100),
 	Repair varchar(100),
 	Surgeon varchar(100),
+	Anesthesiologist varchar(100),
+	Pediatrician varchar(100),
 	Evaluation_Date date,
 	Admission_Date date,
 	Surgery_Date date,
